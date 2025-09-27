@@ -1,4 +1,12 @@
+<<<<<<< HEAD:House.tscn
 [gd_scene load_steps=15 format=3 uid="uid://cljcf4ytu71ul"]
+=======
+<<<<<<< HEAD:scenes/House.tscn
+[gd_scene load_steps=12 format=3 uid="uid://cljcf4ytu71ul"]
+=======
+[gd_scene load_steps=14 format=3 uid="uid://cljcf4ytu71ul"]
+>>>>>>> f802679b02cc61de8a901eade57f233d2484da77:House.tscn
+>>>>>>> d665c12103d2fb646c4b55ea6c4ec1bb82af4a26:scenes/House.tscn
 
 [ext_resource type="Texture2D" uid="uid://diwniuxuln7px" path="res://assets/2d_sprite_animation_assets/run_animation/run-1.png" id="1_ct407"]
 [ext_resource type="Texture2D" uid="uid://2jstahtqt3cj" path="res://assets/2d_sprite_animation_assets/run_animation/run-2.png" id="2_olwjq"]
@@ -8,10 +16,14 @@
 [ext_resource type="Texture2D" uid="uid://t0ly466xu63h" path="res://assets/2d_sprite_animation_assets/run_animation/run-6.png" id="6_cyg1o"]
 [ext_resource type="Texture2D" uid="uid://cnaittgu0p0gv" path="res://assets/2d_sprite_animation_assets/run_animation/run-7.png" id="7_g58hp"]
 [ext_resource type="Texture2D" uid="uid://cb37n0mi7x7f0" path="res://assets/2d_sprite_animation_assets/run_animation/run-8.png" id="8_uf5uw"]
+<<<<<<< HEAD:scenes/House.tscn
+[ext_resource type="Script" path="res://animated_sprite_2d.gd" id="9_olwjq"]
+=======
 [ext_resource type="Texture2D" uid="uid://dw8fb4ux8am2q" path="res://assets/runback1.png" id="9_6pcg8"]
 [ext_resource type="Script" uid="uid://dgerswgm1qrpu" path="res://animated_sprite_2d.gd" id="9_olwjq"]
 [ext_resource type="Texture2D" uid="uid://bqbujkj8acu3i" path="res://assets/runback2.png" id="10_cyg1o"]
 [ext_resource type="Texture2D" uid="uid://c4awnc2oe7ap0" path="res://assets/runback3.png" id="11_g58hp"]
+>>>>>>> f802679b02cc61de8a901eade57f233d2484da77:House.tscn
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b2xwe"]
 animations = [{
@@ -59,24 +71,41 @@ animations = [{
 "speed": 5.0
 }]
 
+<<<<<<< HEAD:House.tscn
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pcg8"]
 size = Vector2(38.508614, 50.455338)
+=======
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ea8vi"]
+>>>>>>> d665c12103d2fb646c4b55ea6c4ec1bb82af4a26:scenes/House.tscn
 
 [node name="House" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
 
+<<<<<<< HEAD:scenes/House.tscn
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(569, 319)
+=======
 [node name="Player" type="CharacterBody2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(563, 307.00003)
 scale = Vector2(3.6830986, 4.261194)
+>>>>>>> f802679b02cc61de8a901eade57f233d2484da77:House.tscn
 sprite_frames = SubResource("SpriteFrames_b2xwe")
 animation = &"run_back"
 frame_progress = 0.062344488
 script = ExtResource("9_olwjq")
 
+<<<<<<< HEAD:scenes/House.tscn
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_ea8vi")
+=======
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(576.0845, 343.5)
 scale = Vector2(3.6830986, 4.261194)
+<<<<<<< HEAD:House.tscn
 shape = SubResource("RectangleShape2D_6pcg8")
+=======
+>>>>>>> f802679b02cc61de8a901eade57f233d2484da77:House.tscn
+>>>>>>> d665c12103d2fb646c4b55ea6c4ec1bb82af4a26:scenes/House.tscn
