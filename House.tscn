@@ -1,5 +1,54 @@
-[gd_scene load_steps=0 format=3 uid="uid://cljcf4ytu71ul"]
+[gd_scene load_steps=11 format=3 uid="uid://cljcf4ytu71ul"]
+
+[ext_resource type="Texture2D" uid="uid://diwniuxuln7px" path="res://assets/2d_sprite_animation_assets/run_animation/run-1.png" id="1_ct407"]
+[ext_resource type="Texture2D" uid="uid://2jstahtqt3cj" path="res://assets/2d_sprite_animation_assets/run_animation/run-2.png" id="2_olwjq"]
+[ext_resource type="Texture2D" uid="uid://bcj3e4r7kodrn" path="res://assets/2d_sprite_animation_assets/run_animation/run-3.png" id="3_74kf8"]
+[ext_resource type="Texture2D" uid="uid://u3rb4f6vkg3t" path="res://assets/2d_sprite_animation_assets/run_animation/run-4.png" id="4_qaecf"]
+[ext_resource type="Texture2D" uid="uid://bxbijuw2qtsft" path="res://assets/2d_sprite_animation_assets/run_animation/run-5.png" id="5_6pcg8"]
+[ext_resource type="Texture2D" uid="uid://t0ly466xu63h" path="res://assets/2d_sprite_animation_assets/run_animation/run-6.png" id="6_cyg1o"]
+[ext_resource type="Texture2D" uid="uid://cnaittgu0p0gv" path="res://assets/2d_sprite_animation_assets/run_animation/run-7.png" id="7_g58hp"]
+[ext_resource type="Texture2D" uid="uid://cb37n0mi7x7f0" path="res://assets/2d_sprite_animation_assets/run_animation/run-8.png" id="8_uf5uw"]
+[ext_resource type="Script" uid="uid://dgerswgm1qrpu" path="res://animated_sprite_2d.gd" id="9_olwjq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b2xwe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ct407")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_olwjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_74kf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qaecf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6pcg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cyg1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g58hp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uf5uw")
+}],
+"loop": true,
+"name": &"run",
+"speed": 15.0
+}]
 
 [node name="House" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(569, 319)
+sprite_frames = SubResource("SpriteFrames_b2xwe")
+animation = &"run"
+frame_progress = 0.6029054
+script = ExtResource("9_olwjq")
