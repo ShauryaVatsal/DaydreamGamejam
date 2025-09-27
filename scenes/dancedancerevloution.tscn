@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://r7q6k7g3y57x"]
 
-[node name="Dancedancerevloution" type="Node2D"]
+[node name="rythmminigame" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
