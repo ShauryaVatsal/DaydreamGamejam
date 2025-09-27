@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cljcf4ytu71ul"]
+[gd_scene load_steps=15 format=3 uid="uid://cljcf4ytu71ul"]
 
 [ext_resource type="Texture2D" uid="uid://diwniuxuln7px" path="res://assets/2d_sprite_animation_assets/run_animation/run-1.png" id="1_ct407"]
 [ext_resource type="Texture2D" uid="uid://2jstahtqt3cj" path="res://assets/2d_sprite_animation_assets/run_animation/run-2.png" id="2_olwjq"]
@@ -59,6 +59,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pcg8"]
+size = Vector2(38.508614, 50.455338)
+
 [node name="House" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -70,9 +73,10 @@ position = Vector2(563, 307.00003)
 scale = Vector2(3.6830986, 4.261194)
 sprite_frames = SubResource("SpriteFrames_b2xwe")
 animation = &"run_back"
-frame_progress = 0.004763504
+frame_progress = 0.062344488
 script = ExtResource("9_olwjq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(563, 307.00003)
+position = Vector2(576.0845, 343.5)
 scale = Vector2(3.6830986, 4.261194)
+shape = SubResource("RectangleShape2D_6pcg8")
