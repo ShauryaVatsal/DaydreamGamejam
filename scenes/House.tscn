@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cljcf4ytu71ul"]
+[gd_scene load_steps=12 format=3 uid="uid://cljcf4ytu71ul"]
 
 [ext_resource type="Texture2D" uid="uid://diwniuxuln7px" path="res://assets/2d_sprite_animation_assets/run_animation/run-1.png" id="1_ct407"]
 [ext_resource type="Texture2D" uid="uid://2jstahtqt3cj" path="res://assets/2d_sprite_animation_assets/run_animation/run-2.png" id="2_olwjq"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://t0ly466xu63h" path="res://assets/2d_sprite_animation_assets/run_animation/run-6.png" id="6_cyg1o"]
 [ext_resource type="Texture2D" uid="uid://cnaittgu0p0gv" path="res://assets/2d_sprite_animation_assets/run_animation/run-7.png" id="7_g58hp"]
 [ext_resource type="Texture2D" uid="uid://cb37n0mi7x7f0" path="res://assets/2d_sprite_animation_assets/run_animation/run-8.png" id="8_uf5uw"]
-[ext_resource type="Script" uid="uid://dgerswgm1qrpu" path="res://animated_sprite_2d.gd" id="9_olwjq"]
+[ext_resource type="Script" path="res://animated_sprite_2d.gd" id="9_olwjq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b2xwe"]
 animations = [{
@@ -42,13 +42,18 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ea8vi"]
+
 [node name="House" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 position = Vector2(569, 319)
 sprite_frames = SubResource("SpriteFrames_b2xwe")
 animation = &"run"
 frame_progress = 0.6029054
 script = ExtResource("9_olwjq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_ea8vi")
