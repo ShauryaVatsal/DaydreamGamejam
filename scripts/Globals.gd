@@ -20,4 +20,5 @@ func _process(delta: float) -> void:
 	if not inHell:
 		set_sanity(get_sanity() - delta)
 		if get_sanity() <= 0:
-			print("Game Lost")
+			get_tree().change_scene_to_file("res://scenes/guessing.tscn")
+			inHell = true

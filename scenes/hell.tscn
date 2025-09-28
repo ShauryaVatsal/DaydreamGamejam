@@ -23,14 +23,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -46.0
-offset_top = -367.0
-offset_right = 704.0
-offset_bottom = 383.0
+offset_left = -154.0
+offset_top = -380.0
+offset_right = 596.0
+offset_bottom = 370.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 1.5707964
 texture = ExtResource("2_idiul")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="ProgressBar" type="ProgressBar" parent="Node/TextureRect"]
 layout_mode = 0
@@ -51,3 +53,5 @@ theme_override_fonts/font = ExtResource("4_rmo56")
 theme_override_font_sizes/font_size = 100
 text = "Real World"
 script = ExtResource("5_71pqw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
