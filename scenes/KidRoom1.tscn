@@ -1,19 +1,40 @@
-[gd_scene load_steps=9 format=3 uid="uid://4r70o32w7w10"]
+[gd_scene load_steps=11 format=3 uid="uid://bqh4w5x6y708a"]
 
+[ext_resource type="Texture2D" uid="uid://ktmor7ygmvx" path="res://assets/wooden-arrow-sign-cartoon-style-isolated-white-background-game-element-vector-cartoon-illustration_273525-1896-Photoroom.png" id="1_8q225"]
 [ext_resource type="Texture2D" uid="uid://bklfvj4267q30" path="res://assets/BackgroundRooms/IMG_0299.webp" id="1_qrkvm"]
+[ext_resource type="Texture2D" uid="uid://dc4qsf6gimkuj" path="res://assets/withboarder.png.png" id="2_1cptb"]
 [ext_resource type="Texture2D" uid="uid://pel14453n4k3" path="res://assets/pngtree-animal-pixel-art-bear-png-image_3132466-removebg-preview.png" id="2_vl11w"]
 [ext_resource type="Texture2D" uid="uid://dqamfjd3iuhiy" path="res://assets/pngtree-animal-pixel-art-bear-png-image_3132466-removebg-preview-1.png.png" id="3_w4j32"]
 [ext_resource type="Texture2D" uid="uid://by3scxjr7gjke" path="res://assets/old-brown-paper-isolated-on-600nw-2512524259-removebg-preview (1).png" id="4_lju8i"]
 [ext_resource type="Script" uid="uid://b7giwcb4no7p0" path="res://scripts/texture_button.gd" id="4_w4j32"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="6_owu2s"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="7_bh3sb"]
-[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scripts/sanity_ui.gd" id="8_owu2s"]
+[ext_resource type="Script" path="res://scripts/sanity_ui.gd" id="8_owu2s"]
 
 [node name="KidRoom1" type="Node2D"]
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Node2D"]
+
+[node name="backtohall1" type="TextureButton" parent="Node2D/CanvasLayer"]
+z_index = 1
+offset_left = 968.0
+offset_top = -21.0
+offset_right = 1156.0
+offset_bottom = 131.0
+texture_normal = ExtResource("1_8q225")
+texture_hover = ExtResource("2_1cptb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/backtohall1"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 63.0
+offset_right = 160.0
+offset_bottom = 86.0
+text = "Back to Hallway"
 
 [node name="Img0299" type="Sprite2D" parent="Node2D/CanvasLayer"]
 position = Vector2(579, 326.74997)
@@ -64,4 +85,6 @@ stretch_mode = 0
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 script = ExtResource("8_owu2s")
 
+[connection signal="pressed" from="Node2D/CanvasLayer/backtohall1" to="Node2D/CanvasLayer/TextureButton" method="_on_backtohall_1_pressed"]
+[connection signal="pressed" from="Node2D/CanvasLayer/backtohall1" to="Node2D/CanvasLayer/backtohall1" method="_on_pressed"]
 [connection signal="pressed" from="Node2D/CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]

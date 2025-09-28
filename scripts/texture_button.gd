@@ -21,3 +21,7 @@ func open_letter():
 func close_letter():
 	var tween = get_tree().create_tween()
 	tween.tween_property(paper, "position", Vector2(574, 1005), 1).set_trans(Tween.TRANS_SINE)
+
+
+func _on_backtohall_1_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/MainGame.tscn")
