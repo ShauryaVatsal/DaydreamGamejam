@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://scripts/letter2.gd" id="6_kapmu"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="7_xacgk"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="8_86875"]
-[ext_resource type="Script" path="res://scripts/sanity_ui.gd" id="9_msblb"]
+[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scripts/sanity_ui.gd" id="9_msblb"]
 [ext_resource type="Texture2D" uid="uid://ktmor7ygmvx" path="res://assets/wooden-arrow-sign-cartoon-style-isolated-white-background-game-element-vector-cartoon-illustration_273525-1896-Photoroom.png" id="10_eknj5"]
 [ext_resource type="Texture2D" uid="uid://dc4qsf6gimkuj" path="res://assets/withboarder.png.png" id="11_rhwvx"]
 
@@ -63,17 +63,17 @@ modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0075
-anchor_top = -0.056363635
-anchor_right = 0.0075
-anchor_bottom = -0.056363635
+anchor_left = -0.09375
+anchor_top = 0.0036363637
+anchor_right = 0.09625
+anchor_bottom = -0.08181818
 offset_left = 165.0
 offset_top = 44.0
 offset_right = 652.0
 offset_bottom = 544.0
 theme_override_fonts/font = ExtResource("7_xacgk")
 theme_override_font_sizes/font_size = 84
-text = "A bloody knife...?"
+text = "Blood knife with engraving on the handle: the initials J.R.… Julie’s full name is Julie Rivers."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3

@@ -1,46 +1,127 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbu3skt6ijdh6"]
+[gd_scene load_steps=11 format=3 uid="uid://bbu3skt6ijdh6"]
 
 [ext_resource type="Script" uid="uid://bbf12oose75h3" path="res://scripts/timetoguess.gd" id="1_cdvy0"]
-[ext_resource type="Texture2D" uid="uid://c2u0n7cj8m827" path="res://assets/blank-photo-paper-clip-260nw-252789808-Photoroom.png" id="2_u8mlg"]
+[ext_resource type="Texture2D" uid="uid://v6xgu5nq57ef" path="res://assets/the-pixel-suspects-v0-8hlyxsu2uk2a1-Photoroom.png" id="2_cdvy0"]
 [ext_resource type="Texture2D" uid="uid://dj4pk7k4jpuk2" path="res://assets/bulletin-board-background-1920-x-1080-2a777zs74avy1sbz.jpg" id="3_e4cdg"]
+[ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="3_u8mlg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4cdg"]
+atlas = ExtResource("2_cdvy0")
+region = Rect2(0, 0, 259, 534)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cu5dn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4cdg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3lqj"]
+atlas = ExtResource("2_cdvy0")
+region = Rect2(259, 0, 259, 534)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7nx1n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3lqj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6nw1"]
+atlas = ExtResource("2_cdvy0")
+region = Rect2(777, 0, 259, 534)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e4cdg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6nw1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Guessing" type="Node2D"]
 
 [node name="timetoguess" type="Node2D" parent="."]
 script = ExtResource("1_cdvy0")
 
-[node name="BlankPhotoPaperClip260Nw252789808Photoroom3" type="Sprite2D" parent="timetoguess"]
-position = Vector2(853.00006, 374)
-scale = Vector2(1.9653846, 1.9653848)
-texture = ExtResource("2_u8mlg")
+[node name="correct" type="TextureButton" parent="timetoguess"]
+offset_left = 506.0
+offset_top = 228.0
+offset_right = 657.0
+offset_bottom = 511.0
 
-[node name="wrong" type="TextureButton" parent="timetoguess/BlankPhotoPaperClip260Nw252789808Photoroom3"]
-offset_left = -353.6203
-offset_top = -60.039154
-offset_right = -242.19174
-offset_bottom = 65.636
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="timetoguess/correct"]
+position = Vector2(64.25, 103.51788)
+scale = Vector2(0.6969112, 0.6969112)
+sprite_frames = SubResource("SpriteFrames_cu5dn")
 
-[node name="BlankPhotoPaperClip260Nw252789808Photoroom" type="Sprite2D" parent="timetoguess"]
-position = Vector2(559.71106, 376.30426)
-scale = Vector2(2.002223, 2.0022237)
-texture = ExtResource("2_u8mlg")
+[node name="Label" type="Label" parent="timetoguess/correct"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 282.0
+offset_right = 74.0
+offset_bottom = 305.0
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("3_u8mlg")
+text = "Julie"
 
-[node name="correct" type="TextureButton" parent="timetoguess/BlankPhotoPaperClip260Nw252789808Photoroom"]
-offset_left = -54.29518
-offset_top = -62.785736
-offset_right = 55.286392
-offset_bottom = 63.277527
+[node name="wrong2" type="TextureButton" parent="timetoguess"]
+offset_left = 836.6634
+offset_top = 220.0
+offset_right = 1022.0
+offset_bottom = 503.778
 
-[node name="BlankPhotoPaperClip260Nw252789808Photoroom2" type="Sprite2D" parent="timetoguess"]
-position = Vector2(265.00003, 378)
-scale = Vector2(1.9653846, 1.9653848)
-texture = ExtResource("2_u8mlg")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="timetoguess/wrong2"]
+position = Vector2(70.08667, 91.768005)
+scale = Vector2(0.7934358, 0.7934359)
+sprite_frames = SubResource("SpriteFrames_7nx1n")
 
-[node name="wrong2" type="TextureButton" parent="timetoguess/BlankPhotoPaperClip260Nw252789808Photoroom2"]
-offset_left = 244.73575
-offset_top = -61.761246
-offset_right = 354.12906
-offset_bottom = 58.51271
+[node name="Label" type="Label" parent="timetoguess/wrong2"]
+layout_mode = 0
+offset_left = 31.999939
+offset_top = 288.0
+offset_right = 80.99994
+offset_bottom = 317.0
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("3_u8mlg")
+text = "Sorcerer 
+Crow"
+horizontal_alignment = 1
+
+[node name="wrong" type="TextureButton" parent="timetoguess"]
+offset_left = 158.00018
+offset_top = 258.0
+offset_right = 381.4534
+offset_bottom = 512.02264
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="timetoguess/wrong"]
+z_index = 1
+position = Vector2(110.12897, 83.71083)
+scale = Vector2(0.6573693, 0.65736955)
+sprite_frames = SubResource("SpriteFrames_e4cdg")
+
+[node name="Label" type="Label" parent="timetoguess/wrong"]
+layout_mode = 0
+offset_left = 14.749756
+offset_top = 245.76785
+offset_right = 96.749756
+offset_bottom = 274.76785
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("3_u8mlg")
+text = "Knight 
+Geoffrey"
+horizontal_alignment = 1
 
 [node name="BulletinBoardBackground1920X10802a777Zs74Avy1Sbz" type="Sprite2D" parent="."]
 z_index = -1
@@ -48,6 +129,17 @@ position = Vector2(576.7777, 322.00003)
 scale = Vector2(0.59814805, 0.59814805)
 texture = ExtResource("3_e4cdg")
 
-[connection signal="pressed" from="timetoguess/BlankPhotoPaperClip260Nw252789808Photoroom3/wrong" to="timetoguess" method="_on_wrong_pressed"]
-[connection signal="pressed" from="timetoguess/BlankPhotoPaperClip260Nw252789808Photoroom/correct" to="timetoguess" method="_on_correct_pressed"]
-[connection signal="pressed" from="timetoguess/BlankPhotoPaperClip260Nw252789808Photoroom2/wrong2" to="timetoguess" method="_on_wrong_2_pressed"]
+[node name="Label" type="Label" parent="."]
+offset_left = 50.0
+offset_top = 22.0
+offset_right = 501.0
+offset_bottom = 97.0
+scale = Vector2(2.4, 2.4)
+text = "Click on a Character to Guess!
+Watch out, a wrong guess will keep you 
+in the underworld!"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="timetoguess/correct" to="timetoguess" method="_on_correct_pressed"]
+[connection signal="pressed" from="timetoguess/wrong2" to="timetoguess" method="_on_wrong_2_pressed"]
+[connection signal="pressed" from="timetoguess/wrong" to="timetoguess" method="_on_wrong_pressed"]
