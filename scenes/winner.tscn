@@ -35,3 +35,13 @@ direction = Vector2(0, 0)
 spread = 180.0
 scale_amount_min = 0.0
 scale_amount_max = 0.1
+
+[node name="Label2" type="Label" parent="Sprite2D"]
+offset_left = -134.64035
+offset_top = -89.22317
+offset_right = 22.876953
+offset_bottom = -40.223167
+scale = Vector2(0.6, 0.6)
+text = "Press Esc to Restart in the overworld"
+horizontal_alignment = 1
+autowrap_mode = 3
