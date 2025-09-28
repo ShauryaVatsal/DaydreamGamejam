@@ -1,7 +1,7 @@
 extends Node
 
 var sanity = 0
-var game_state = "playing"
+var inHell = true
 signal sanity_changed(amount)
 
 func set_sanity(amount):
