@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbu3skt6ijdh6"]
+
+[ext_resource type="Script" uid="uid://bbf12oose75h3" path="res://scripts/timetoguess.gd" id="1_cdvy0"]
+[ext_resource type="Texture2D" uid="uid://c2u0n7cj8m827" path="res://assets/blank-photo-paper-clip-260nw-252789808-Photoroom.png" id="2_u8mlg"]
+[ext_resource type="Texture2D" uid="uid://dj4pk7k4jpuk2" path="res://assets/bulletin-board-background-1920-x-1080-2a777zs74avy1sbz.jpg" id="3_e4cdg"]
+
+[node name="Guessing" type="Node2D"]
+
+[node name="timetoguess" type="Node2D" parent="."]
+script = ExtResource("1_cdvy0")
+
+[node name="BlankPhotoPaperClip260Nw252789808Photoroom3" type="Sprite2D" parent="timetoguess"]
+position = Vector2(853.00006, 374)
+scale = Vector2(1.9653846, 1.9653848)
+texture = ExtResource("2_u8mlg")
+
+[node name="wrong" type="TextureButton" parent="timetoguess/BlankPhotoPaperClip260Nw252789808Photoroom3"]
+offset_left = -353.6203
+offset_top = -60.039154
+offset_right = -242.19174
+offset_bottom = 65.636
+
+[node name="BlankPhotoPaperClip260Nw252789808Photoroom" type="Sprite2D" parent="timetoguess"]
+position = Vector2(559.71106, 376.30426)
+scale = Vector2(2.002223, 2.0022237)
+texture = ExtResource("2_u8mlg")
+
+[node name="correct" type="TextureButton" parent="timetoguess/BlankPhotoPaperClip260Nw252789808Photoroom"]
+offset_left = -54.29518
+offset_top = -62.785736
+offset_right = 55.286392
+offset_bottom = 63.277527
+
+[node name="BlankPhotoPaperClip260Nw252789808Photoroom2" type="Sprite2D" parent="timetoguess"]
+position = Vector2(265.00003, 378)
+scale = Vector2(1.9653846, 1.9653848)
+texture = ExtResource("2_u8mlg")
+
+[node name="wrong2" type="TextureButton" parent="timetoguess/BlankPhotoPaperClip260Nw252789808Photoroom2"]
+offset_left = 244.73575
+offset_top = -61.761246
+offset_right = 354.12906
+offset_bottom = 58.51271
+
+[node name="BulletinBoardBackground1920X10802a777Zs74Avy1Sbz" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(576.7777, 322.00003)
+scale = Vector2(0.59814805, 0.59814805)
+texture = ExtResource("3_e4cdg")
+
+[connection signal="pressed" from="timetoguess/BlankPhotoPaperClip260Nw252789808Photoroom3/wrong" to="timetoguess" method="_on_wrong_pressed"]
+[connection signal="pressed" from="timetoguess/BlankPhotoPaperClip260Nw252789808Photoroom/correct" to="timetoguess" method="_on_correct_pressed"]
+[connection signal="pressed" from="timetoguess/BlankPhotoPaperClip260Nw252789808Photoroom2/wrong2" to="timetoguess" method="_on_wrong_2_pressed"]

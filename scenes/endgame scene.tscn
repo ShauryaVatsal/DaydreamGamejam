@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf3lenubapxvx"]
+
+[ext_resource type="Texture2D" uid="uid://ccqrehvqm0yrn" path="res://assets/BurntNoteSelected.png.import.webp" id="1_iop1p"]
+[ext_resource type="Texture2D" uid="uid://dl75akiabotpj" path="res://assets/work!1!!-1.png.png" id="1_pktus"]
+[ext_resource type="Texture2D" uid="uid://b1i0qaxifw5a2" path="res://assets/fhsdhfdsuifiudshdsf-1.png.png" id="2_sfgks"]
+[ext_resource type="Script" uid="uid://c3q7c7m3ajpd3" path="res://scripts/guess_button.gd" id="3_sfgks"]
+
+[node name="EndgameScene" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="GuessButton" type="TextureButton" parent="Node2D"]
+z_index = 1
+offset_left = 73.0
+offset_top = 61.0
+offset_right = 1167.0
+offset_bottom = 685.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_pktus")
+texture_hover = ExtResource("2_sfgks")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_sfgks")
+
+[node name="Label" type="Label" parent="Node2D/GuessButton"]
+layout_mode = 0
+offset_left = 63.99997
+offset_top = 175.99997
+offset_right = 421.99997
+offset_bottom = 224.99997
+scale = Vector2(5, 5)
+text = "Time to Take A Guess! 
+Click Me to Take A Guess!"
+
+[node name="BurntNoteSelected_png_import" type="Sprite2D" parent="Node2D"]
+position = Vector2(579.5, 327.75)
+scale = Vector2(1.9316666, 1.9028986)
+texture = ExtResource("1_iop1p")
+
+[connection signal="pressed" from="Node2D/GuessButton" to="Node2D/GuessButton" method="_on_pressed"]
