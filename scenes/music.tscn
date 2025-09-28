@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq4erunymvsnl"]
+
+[ext_resource type="AudioStream" uid="uid://cy2gkkr3lnvj4" path="res://Shadows Crawl.mp3" id="1_05ggv"]
+
+[node name="Music" type="Node2D"]
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_05ggv")
+autoplay = true
