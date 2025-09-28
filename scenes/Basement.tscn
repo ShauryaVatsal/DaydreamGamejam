@@ -1,14 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://s44i6tvkn8or"]
+[gd_scene load_steps=12 format=3 uid="uid://de0uqufm1qdrq"]
 
 [ext_resource type="Texture2D" uid="uid://byerl1j8ph01d" path="res://assets/BackgroundRooms/IMG_0297.jpeg" id="1_kvs36"]
 [ext_resource type="Script" uid="uid://d02i47d67s00v" path="res://scripts/interactables4.gd" id="2_kvs36"]
 [ext_resource type="Texture2D" uid="uid://c6xpjhuyi68e2" path="res://assets/pills.png.png" id="3_3fd3q"]
 [ext_resource type="Texture2D" uid="uid://4ly22v0884j3" path="res://assets/pills_selected.png.png" id="4_jef7w"]
 [ext_resource type="Texture2D" uid="uid://dqmlwjvfsrvop" path="res://assets/Letter.png" id="5_v2gnl"]
-[ext_resource type="Script" uid="uid://re7ujg40e1xd" path="res://scripts/letter4.gd" id="6_3wm7j"]
+[ext_resource type="Script" path="res://scripts/letter4.gd" id="6_3wm7j"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="7_rkwqm"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="8_plnnc"]
-[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scripts/sanity_ui.gd" id="9_pbts2"]
+[ext_resource type="Script" path="res://scripts/sanity_ui.gd" id="9_pbts2"]
+[ext_resource type="Texture2D" uid="uid://ktmor7ygmvx" path="res://assets/wooden-arrow-sign-cartoon-style-isolated-white-background-game-element-vector-cartoon-illustration_273525-1896-Photoroom.png" id="10_3fd3q"]
+[ext_resource type="Texture2D" uid="uid://dc4qsf6gimkuj" path="res://assets/withboarder.png.png" id="11_jef7w"]
 
 [node name="Basement" type="Node2D"]
 
@@ -89,3 +91,23 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 script = ExtResource("9_pbts2")
+
+[node name="backtohall1" type="TextureButton" parent="."]
+offset_left = 962.0
+offset_top = -12.0
+offset_right = 1150.0
+offset_bottom = 140.0
+texture_normal = ExtResource("10_3fd3q")
+texture_hover = ExtResource("11_jef7w")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="backtohall1"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 63.0
+offset_right = 160.0
+offset_bottom = 86.0
+text = "Back to Hallway"
+
+[connection signal="pressed" from="backtohall1" to="Interactables" method="_on_backtohall_1_pressed"]

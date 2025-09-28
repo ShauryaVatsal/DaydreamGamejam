@@ -1,14 +1,15 @@
-[gd_scene load_steps=56 format=3 uid="uid://ce7o6w3i6dmq2"]
+[gd_scene load_steps=58 format=3 uid="uid://ce7o6w3i6dmq2"]
 
-[ext_resource type="Script" path="res://scripts/area_2d.gd" id="1_7fyak"]
-[ext_resource type="Script" path="res://scenes/player.gd" id="1_t4bxf"]
+[ext_resource type="Script" uid="uid://cxmrihrqnodi6" path="res://scripts/area_2d.gd" id="1_7fyak"]
+[ext_resource type="Script" uid="uid://bwawscerxtm8j" path="res://scenes/player.gd" id="1_t4bxf"]
 [ext_resource type="Texture2D" uid="uid://cwwqr6mv43s3r" path="res://assets/29a39f6d55f61dc9bd058ff5954629d8914ee249-removebg-preview.png" id="2_xej52"]
 [ext_resource type="Texture2D" uid="uid://cb20rnhvc1spg" path="res://assets/seamless-texture-cartoon-grass-green-plants-pattern-for-wallpaper-illustration-backdrop-organic-background-for-the-game-gui-vector.jpg" id="3_t4bxf"]
 [ext_resource type="Texture2D" uid="uid://bbxt8gsj8kn8i" path="res://assets/flippedghots.png" id="3_x628s"]
-[ext_resource type="Script" path="res://scripts/area_2_dextra.gd" id="4_fpdtd"]
+[ext_resource type="Script" uid="uid://c2ixw65qnt6bl" path="res://scripts/area_2_dextra.gd" id="4_fpdtd"]
 [ext_resource type="Texture2D" uid="uid://b83887wtw8y1t" path="res://assets/Free-Ghost-Pixel-Art-Sprite-Sheets2-Photoroom.png" id="4_x628s"]
+[ext_resource type="Script" uid="uid://c1qu1lt7dnkqr" path="res://scripts/room_3_area.gd" id="5_rtryj"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="8_7f7ne"]
-[ext_resource type="Script" uid="uid://dgrk5xfdbttsw" path="res://scenes/worldbutton.gd" id="9_rtryj"]
+[ext_resource type="Script" path="res://scenes/worldbutton.gd" id="9_rtryj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4bxf"]
 size = Vector2(39.40119, 273.52942)
@@ -62,6 +63,9 @@ size = Vector2(120.83331, 83.33332)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0bag"]
 size = Vector2(247, 126.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hogh4"]
+size = Vector2(168, 109.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7fyak"]
 atlas = ExtResource("4_x628s")
@@ -187,7 +191,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 10.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -264,8 +268,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x628s"]
-radius = 14.0
-height = 62.0
+radius = 25.0
+height = 86.0
 
 [node name="MainGame" type="Node2D"]
 
@@ -715,22 +719,12 @@ shape = SubResource("RectangleShape2D_r0bag")
 [node name="Room3Door" type="Area2D" parent="Overworld"]
 position = Vector2(640, 100)
 
-[node name="Room3DoorCollision" type="CollisionShape2D" parent="Overworld/Room3Door"]
+[node name="room3area" type="Area2D" parent="Overworld/Room3Door"]
+script = ExtResource("5_rtryj")
 
-[node name="Room3DoorSprite" type="ColorRect" parent="Overworld/Room3Door"]
-offset_left = -50.0
-offset_top = -25.0
-offset_right = 50.0
-offset_bottom = 25.0
-color = Color(0.6, 0.3, 0.1, 1)
-
-[node name="Room3DoorLabel" type="Label" parent="Overworld/Room3Door"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "ROOM 3"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Room3DoorCollision" type="CollisionShape2D" parent="Overworld/Room3Door/room3area"]
+position = Vector2(166, 205.25)
+shape = SubResource("RectangleShape2D_hogh4")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(640, 360)
@@ -739,20 +733,27 @@ script = ExtResource("1_t4bxf")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="Player"]
 z_index = 1
-position = Vector2(-416, 235)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-399.75, 215.54578)
+scale = Vector2(0.72887325, 0.72887325)
 sprite_frames = SubResource("SpriteFrames_4h46e")
-animation = &"Run"
+animation = &"Idle"
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
-position = Vector2(-408, 229)
+position = Vector2(-387, 224)
 shape = SubResource("CapsuleShape2D_x628s")
 
-[node name="PlayButton" type="Button" parent="."]
-offset_left = 905.0
-offset_top = 56.0
-offset_right = 1089.0
-offset_bottom = 144.0
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-407, 232)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PlayButton" type="Button" parent="CanvasLayer"]
+offset_left = 871.0
+offset_top = 79.0
+offset_right = 1055.0
+offset_bottom = 167.0
 theme_override_fonts/font = ExtResource("8_7f7ne")
 theme_override_font_sizes/font_size = 100
 text = "Hell"
@@ -760,3 +761,4 @@ script = ExtResource("9_rtryj")
 
 [connection signal="body_entered" from="Overworld/Room1Door/Area2D" to="Overworld/Room1Door/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Overworld/Room2Door/Area2Dextra" to="Overworld/Room1Door/Area2D" method="_on_area_2_dextra_body_entered"]
+[connection signal="body_entered" from="Overworld/Room3Door/room3area" to="Overworld/Room1Door/Area2D" method="_on_room_3_area_body_entered"]
