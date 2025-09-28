@@ -7,9 +7,11 @@ signal sanity_changed(amount)
 func _ready() -> void:
 	set_sanity(100)
 	
+	
 
 func set_sanity(amount):
 	sanity = amount
+	print("san changed")
 	sanity_changed.emit(sanity)
 	
 func get_sanity():

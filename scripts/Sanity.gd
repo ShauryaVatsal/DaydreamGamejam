@@ -5,3 +5,7 @@ func update_bar():
 	
 func _ready():
 	Globals.connect("sanity_changed", update_bar)
+
+func _process(delta: float) -> void:
+	value = Globals.get_sanity()
+	print("updating sanity")
