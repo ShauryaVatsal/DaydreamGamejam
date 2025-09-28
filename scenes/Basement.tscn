@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://c6xpjhuyi68e2" path="res://assets/pills.png.png" id="3_3fd3q"]
 [ext_resource type="Texture2D" uid="uid://4ly22v0884j3" path="res://assets/pills_selected.png.png" id="4_jef7w"]
 [ext_resource type="Texture2D" uid="uid://dqmlwjvfsrvop" path="res://assets/Letter.png" id="5_v2gnl"]
-[ext_resource type="Script" path="res://scripts/letter4.gd" id="6_3wm7j"]
+[ext_resource type="Script" uid="uid://re7ujg40e1xd" path="res://scripts/letter4.gd" id="6_3wm7j"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="7_rkwqm"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="8_plnnc"]
-[ext_resource type="Script" path="res://scripts/sanity_ui.gd" id="9_pbts2"]
+[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scripts/sanity_ui.gd" id="9_pbts2"]
 [ext_resource type="Texture2D" uid="uid://ktmor7ygmvx" path="res://assets/wooden-arrow-sign-cartoon-style-isolated-white-background-game-element-vector-cartoon-illustration_273525-1896-Photoroom.png" id="10_3fd3q"]
 [ext_resource type="Texture2D" uid="uid://dc4qsf6gimkuj" path="res://assets/withboarder.png.png" id="11_jef7w"]
 
