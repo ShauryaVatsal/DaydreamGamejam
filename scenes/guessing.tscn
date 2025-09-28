@@ -132,13 +132,13 @@ texture = ExtResource("3_e4cdg")
 [node name="Label" type="Label" parent="."]
 offset_left = 50.0
 offset_top = 22.0
-offset_right = 501.0
+offset_right = 497.49997
 offset_bottom = 97.0
 scale = Vector2(2.4, 2.4)
-text = "Click on a Character to Guess!
-Watch out, a wrong guess will keep you 
-in the underworld!"
+text = "Click on a Character to Guess! Watch out, a wrong guess will keep you in the underworld!"
 horizontal_alignment = 1
+autowrap_mode = 3
+autowrap_trim_flags = 128
 
 [connection signal="pressed" from="timetoguess/correct" to="timetoguess" method="_on_correct_pressed"]
 [connection signal="pressed" from="timetoguess/wrong2" to="timetoguess" method="_on_wrong_2_pressed"]

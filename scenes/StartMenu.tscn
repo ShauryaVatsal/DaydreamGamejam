@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ch5ls3j6t6m3f"]
 
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="1_kmax6"]
-[ext_resource type="Script" path="res://scenes/play.gd" id="2_cp7se"]
+[ext_resource type="Script" uid="uid://dy5w52t662d5n" path="res://scenes/play.gd" id="2_cp7se"]
 
 [node name="StartMenu" type="Node2D"]
 
@@ -12,11 +12,12 @@ color = Color(0.18431373, 0.007843138, 0.05882353, 1)
 
 [node name="Title" type="Label" parent="ColorRect"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 1141.0
+offset_bottom = 159.0
 theme_override_fonts/font = ExtResource("1_kmax6")
 theme_override_font_sizes/font_size = 200
-text = "GAME NAME!!!"
+text = "The Final Clue"
+horizontal_alignment = 1
 
 [node name="PlayButton" type="Button" parent="ColorRect"]
 layout_mode = 0
