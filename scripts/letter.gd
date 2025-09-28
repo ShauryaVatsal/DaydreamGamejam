@@ -1,6 +1,6 @@
 extends TextureRect
 
-@onready var envelope = get_node("Interactables/Sprite2D")
+@onready var envelope = get_node("../Interactables/Sprite2D")
 var open = false
 func open_letter():
 	var tween = get_tree().create_tween()

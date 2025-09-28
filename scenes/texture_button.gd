@@ -4,9 +4,9 @@ extends TextureButton
 var open = false
 
 func _ready():
-	pressed.connect(_button_pressed)
+	pressed.connect(_on_button_pressed)
 
-func _button_pressed():
+func _on_button_pressed():
 	open = not open
 	if open:
 		open_letter()

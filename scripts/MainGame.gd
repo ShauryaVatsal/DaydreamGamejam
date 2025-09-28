@@ -24,6 +24,19 @@ var game_ended = false
 
 # Player Reference
 @onready var player = $Player
+@onready var player_sprite = $Player/PlayerSprite
+
+# Background boundaries
+var background_position = Vector2(578.25006, 332)
+var background_scale = Vector2(1.9102142, 1.6836983)
+var background_original_size = Vector2(607, 411)
+var background_scaled_size = background_original_size * background_scale
+var background_bounds = Rect2(
+	background_position.x - background_scaled_size.x / 2,
+	background_position.y - background_scaled_size.y / 2,
+	background_scaled_size.x,
+	background_scaled_size.y
+)
 
 # Clue Data - Each clue has: name, text, and room
 var clue_data = [
@@ -128,6 +141,38 @@ func _physics_process(_delta):
 		velocity = velocity.normalized() * 200.0
 		player.velocity = velocity
 		player.move_and_slide()
+		
+		# Constrain player to background boundaries
+		constrain_player_to_background()
+		
+		# Play run animation
+		if player_sprite.animation != "Run":
+			player_sprite.play("Run")
+	else:
+		# Play idle animation when not moving
+		if player_sprite.animation != "Idle":
+			player_sprite.play("Idle")
+
+# Constrain player to background boundaries
+func constrain_player_to_background():
+	var player_pos = player.position
+	var constrained_pos = player_pos
+	
+	match current_room:
+		"overworld":
+			# Constrain to background image boundaries
+			constrained_pos = Vector2(
+				clamp(player_pos.x, background_bounds.position.x, background_bounds.position.x + background_bounds.size.x),
+				clamp(player_pos.y, background_bounds.position.y, background_bounds.position.y + background_bounds.size.y)
+			)
+		"room1", "room2", "room3":
+			# Constrain to screen boundaries for rooms (you can adjust these values)
+			constrained_pos = Vector2(
+				clamp(player_pos.x, 50, 1230),  # Screen width minus margins
+				clamp(player_pos.y, 50, 670)    # Screen height minus margins
+			)
+	
+	player.position = constrained_pos
 
 # Door Entered Signals
 func _on_room1_door_entered(_body):
