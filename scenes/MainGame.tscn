@@ -1,9 +1,11 @@
-[gd_scene load_steps=50 format=3 uid="uid://ce7o6w3i6dmq2"]
+[gd_scene load_steps=54 format=3 uid="uid://ce7o6w3i6dmq2"]
 
+[ext_resource type="Script" uid="uid://cxmrihrqnodi6" path="res://scripts/area_2d.gd" id="1_7fyak"]
 [ext_resource type="Script" uid="uid://bwawscerxtm8j" path="res://scenes/player.gd" id="1_t4bxf"]
 [ext_resource type="Texture2D" uid="uid://cwwqr6mv43s3r" path="res://assets/29a39f6d55f61dc9bd058ff5954629d8914ee249-removebg-preview.png" id="2_xej52"]
 [ext_resource type="Texture2D" uid="uid://cb20rnhvc1spg" path="res://assets/seamless-texture-cartoon-grass-green-plants-pattern-for-wallpaper-illustration-backdrop-organic-background-for-the-game-gui-vector.jpg" id="3_t4bxf"]
 [ext_resource type="Texture2D" uid="uid://bbxt8gsj8kn8i" path="res://assets/flippedghots.png" id="3_x628s"]
+[ext_resource type="Script" uid="uid://c2ixw65qnt6bl" path="res://scripts/area_2_dextra.gd" id="4_fpdtd"]
 [ext_resource type="Texture2D" uid="uid://b83887wtw8y1t" path="res://assets/Free-Ghost-Pixel-Art-Sprite-Sheets2-Photoroom.png" id="4_x628s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4bxf"]
@@ -51,7 +53,13 @@ size = Vector2(81.88191, 150.76157)
 size = Vector2(193.22552, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4h46e"]
-size = Vector2(20, 111.06503)
+size = Vector2(20.181541, 77.11415)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf4d6"]
+size = Vector2(120.83331, 83.33332)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0bag"]
+size = Vector2(247, 126.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7fyak"]
 atlas = ExtResource("4_x628s")
@@ -258,102 +266,6 @@ radius = 14.0
 height = 62.0
 
 [node name="MainGame" type="Node2D"]
-
-[node name="Overworld" type="Node2D" parent="."]
-
-[node name="OverworldBackground" type="ColorRect" parent="Overworld"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color(0.1, 0.1, 0.3, 1)
-
-[node name="OverworldLabel" type="Label" parent="Overworld"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -50.0
-offset_right = 200.0
-offset_bottom = 50.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "OVERWORLD - The Haunted Manor"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Room1Door" type="Area2D" parent="Overworld"]
-position = Vector2(120, 164)
-scale = Vector2(1.2, 1.2)
-
-[node name="Room1DoorCollision" type="CollisionShape2D" parent="Overworld/Room1Door"]
-scale = Vector2(1.2, 1.2)
-
-[node name="Room1DoorSprite" type="ColorRect" parent="Overworld/Room1Door"]
-offset_left = -50.0
-offset_top = -24.0
-offset_right = 50.0
-offset_bottom = 26.0
-scale = Vector2(1.2, 1.2)
-color = Color(0.6, 0.3, 0.1, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Room1DoorLabel" type="Label" parent="Overworld/Room1Door"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -45.333336
-offset_top = -11.5
-offset_right = 18.666664
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.2, 1.2)
-text = "Kid 
-Bedroom"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Room2Door" type="Area2D" parent="Overworld"]
-position = Vector2(1000, 300)
-
-[node name="Room2DoorCollision" type="CollisionShape2D" parent="Overworld/Room2Door"]
-
-[node name="Room2DoorSprite" type="ColorRect" parent="Overworld/Room2Door"]
-offset_left = -50.0
-offset_top = -25.0
-offset_right = 50.0
-offset_bottom = 25.0
-color = Color(0.6, 0.3, 0.1, 1)
-
-[node name="Room2DoorLabel" type="Label" parent="Overworld/Room2Door"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "ROOM 2"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Room3Door" type="Area2D" parent="Overworld"]
-position = Vector2(640, 100)
-
-[node name="Room3DoorCollision" type="CollisionShape2D" parent="Overworld/Room3Door"]
-
-[node name="Room3DoorSprite" type="ColorRect" parent="Overworld/Room3Door"]
-offset_left = -50.0
-offset_top = -25.0
-offset_right = 50.0
-offset_bottom = 25.0
-color = Color(0.6, 0.3, 0.1, 1)
-
-[node name="Room3DoorLabel" type="Label" parent="Overworld/Room3Door"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "ROOM 3"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Room1" type="Node2D" parent="."]
 visible = false
@@ -748,9 +660,75 @@ scale = Vector2(1, 0.99999994)
 shape = SubResource("RectangleShape2D_lupq4")
 
 [node name="boarder14" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/StaticBody2D"]
-position = Vector2(179.43011, -21.084564)
-scale = Vector2(1, 0.9999998)
+position = Vector2(180.33289, -24.351166)
+scale = Vector2(1, 0.99999964)
 shape = SubResource("RectangleShape2D_4h46e")
+
+[node name="Overworld" type="Node2D" parent="."]
+
+[node name="OverworldBackground" type="ColorRect" parent="Overworld"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.1, 0.3, 1)
+
+[node name="OverworldLabel" type="Label" parent="Overworld"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -50.0
+offset_right = 200.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "OVERWORLD - The Haunted Manor"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Room1Door" type="Area2D" parent="Overworld"]
+position = Vector2(120, 164)
+scale = Vector2(1.2, 1.2)
+
+[node name="Area2D" type="Area2D" parent="Overworld/Room1Door"]
+script = ExtResource("1_7fyak")
+
+[node name="Room1DoorCollision" type="CollisionShape2D" parent="Overworld/Room1Door/Area2D"]
+position = Vector2(6.666649, -61.66665)
+scale = Vector2(1.2, 1.2)
+shape = SubResource("RectangleShape2D_cf4d6")
+
+[node name="Room2Door" type="Area2D" parent="Overworld"]
+position = Vector2(1000, 300)
+
+[node name="Area2Dextra" type="Area2D" parent="Overworld/Room2Door"]
+script = ExtResource("4_fpdtd")
+
+[node name="Room2DoorCollision" type="CollisionShape2D" parent="Overworld/Room2Door/Area2Dextra"]
+position = Vector2(-549.5, -212.25)
+shape = SubResource("RectangleShape2D_r0bag")
+
+[node name="Room3Door" type="Area2D" parent="Overworld"]
+position = Vector2(640, 100)
+
+[node name="Room3DoorCollision" type="CollisionShape2D" parent="Overworld/Room3Door"]
+
+[node name="Room3DoorSprite" type="ColorRect" parent="Overworld/Room3Door"]
+offset_left = -50.0
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 25.0
+color = Color(0.6, 0.3, 0.1, 1)
+
+[node name="Room3DoorLabel" type="Label" parent="Overworld/Room3Door"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "ROOM 3"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(640, 360)
@@ -767,3 +745,6 @@ animation = &"Run"
 [node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
 position = Vector2(-408, 229)
 shape = SubResource("CapsuleShape2D_x628s")
+
+[connection signal="body_entered" from="Overworld/Room1Door/Area2D" to="Overworld/Room1Door/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Overworld/Room2Door/Area2Dextra" to="Overworld/Room1Door/Area2D" method="_on_area_2_dextra_body_entered"]
