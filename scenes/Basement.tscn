@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://de0uqufm1qdrq"]
+[gd_scene load_steps=13 format=3 uid="uid://de0uqufm1qdrq"]
 
 [ext_resource type="Texture2D" uid="uid://byerl1j8ph01d" path="res://assets/BackgroundRooms/IMG_0297.jpeg" id="1_kvs36"]
 [ext_resource type="Script" uid="uid://d02i47d67s00v" path="res://scripts/interactables4.gd" id="2_kvs36"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://re7ujg40e1xd" path="res://scripts/letter4.gd" id="6_3wm7j"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="7_rkwqm"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="8_plnnc"]
+[ext_resource type="Texture2D" uid="uid://c7xyygvtywfl4" path="res://assets/360_F_614611127_ir33UnJra2ZDA5jAbqpANxy3xPzjrPEE-Photoroom.png" id="9_jef7w"]
 [ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scripts/sanity_ui.gd" id="9_pbts2"]
 [ext_resource type="Texture2D" uid="uid://ktmor7ygmvx" path="res://assets/wooden-arrow-sign-cartoon-style-isolated-white-background-game-element-vector-cartoon-illustration_273525-1896-Photoroom.png" id="10_3fd3q"]
 [ext_resource type="Texture2D" uid="uid://dc4qsf6gimkuj" path="res://assets/withboarder.png.png" id="11_jef7w"]
@@ -88,6 +89,11 @@ texture_normal = ExtResource("8_plnnc")
 ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
+
+[node name="360F614611127Ir33UnJra2zda5jAbqpANxy3xPzjrPeePhotoroom" type="Sprite2D" parent="Interactables/Letter"]
+position = Vector2(-7.999939, -310.00003)
+scale = Vector2(0.33888888, 0.33888888)
+texture = ExtResource("9_jef7w")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 script = ExtResource("9_pbts2")

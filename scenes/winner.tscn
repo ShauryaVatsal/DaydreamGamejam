@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1urc1e5sbsrg"]
+[gd_scene load_steps=5 format=3 uid="uid://b6fnck55inqmd"]
 
 [ext_resource type="Texture2D" uid="uid://gapcd4d5rpr8" path="res://assets/family.jpeg" id="1_6vg2h"]
+[ext_resource type="Script" uid="uid://4tyvlyj4piee" path="res://scenes/sprite_2d.gd" id="2_74nyh"]
 [ext_resource type="Texture2D" uid="uid://bomhsbkik2yjj" path="res://assets/neutral-removebg-preview.png" id="2_osg38"]
 [ext_resource type="Texture2D" uid="uid://slklj2ekrnmi" path="res://assets/star.jpeg" id="3_74nyh"]
 
@@ -10,6 +11,7 @@
 position = Vector2(1, 319.5)
 scale = Vector2(4.196364, 3.5136614)
 texture = ExtResource("1_6vg2h")
+script = ExtResource("2_74nyh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(28.596184, -4.1267457)
