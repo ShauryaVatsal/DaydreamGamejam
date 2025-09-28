@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqh4w5x6y708a"]
 
-[ext_resource type="Texture2D" uid="uid://bklfvj4267q30" path="res://assets/IMG_0299.webp" id="1_u4qm1"]
+[ext_resource type="Texture2D" uid="uid://bklfvj4267q30" path="res://assets/BackgroundRooms/IMG_0299.webp" id="1_qrkvm"]
 [ext_resource type="Texture2D" uid="uid://pel14453n4k3" path="res://assets/pngtree-animal-pixel-art-bear-png-image_3132466-removebg-preview.png" id="2_vl11w"]
 [ext_resource type="Script" uid="uid://b7giwcb4no7p0" path="res://scenes/texture_button.gd" id="3_o0t10"]
+[ext_resource type="Texture2D" uid="uid://dqamfjd3iuhiy" path="res://assets/pngtree-animal-pixel-art-bear-png-image_3132466-removebg-preview-1.png.png" id="3_w4j32"]
 [ext_resource type="Texture2D" uid="uid://by3scxjr7gjke" path="res://assets/old-brown-paper-isolated-on-600nw-2512524259-removebg-preview (1).png" id="4_lju8i"]
-[ext_resource type="Texture2D" uid="uid://xbei1twuuby8" path="res://assets/18-187794_cartoon-picture-frame-png-empty-frame-clip-art-removebg-preview.png" id="5_2lpg7"]
 
 [node name="KidRoom1" type="Node2D"]
 
@@ -15,7 +15,7 @@
 [node name="Img0299" type="Sprite2D" parent="Node2D/CanvasLayer"]
 position = Vector2(579, 326.74997)
 scale = Vector2(1.803125, 1.3593749)
-texture = ExtResource("1_u4qm1")
+texture = ExtResource("1_qrkvm")
 
 [node name="TextureButton" type="TextureButton" parent="Node2D/CanvasLayer"]
 offset_left = 265.0
@@ -24,49 +24,28 @@ offset_right = 625.0
 offset_bottom = 631.0
 scale = Vector2(0.34, 0.34)
 texture_normal = ExtResource("2_vl11w")
+texture_hover = ExtResource("3_w4j32")
 script = ExtResource("3_o0t10")
 
-[node name="Label" type="Label" parent="Node2D/CanvasLayer"]
-visible = false
+[node name="Paper" type="Sprite2D" parent="Node2D/CanvasLayer"]
+position = Vector2(574, 1005)
+scale = Vector2(1.5008328, 1.8738868)
+texture = ExtResource("4_lju8i")
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer/Paper"]
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 z_index = 2
-offset_left = 233.00003
-offset_top = 211.00002
-offset_right = 780.0
-offset_bottom = 468.0
+offset_left = -228.53976
+offset_top = -74.177376
+offset_right = 313.46024
+offset_bottom = 188.98013
 scale = Vector2(1.3, 1.3)
-text = "\"Clara, I know I wasn’t there when you needed me most. 
-But I found out the truth about Mom’s will. 
-We need to talk before it's too late. You deserve to know what he did.\"
+text = "\"Clara, I know I wasn’t there when you needed 
+me most. But I found out the truth about 
+Mom’s will. We need to talk before it's too late. 
+You deserve to know what he did.\"
  —Michael
 "
-
-[node name="Paper" type="Sprite2D" parent="Node2D/CanvasLayer"]
-visible = false
-position = Vector2(574, 308)
-scale = Vector2(1.5008328, 1.8738868)
-texture = ExtResource("4_lju8i")
-
-[node name="18187794CartoonPictureFramePngEmptyFrameClipArtRemovebgPreview" type="Sprite2D" parent="Node2D/CanvasLayer"]
-position = Vector2(600, 246.00003)
-scale = Vector2(0.20537639, 0.21855178)
-texture = ExtResource("5_2lpg7")
-
-[node name="Label2" type="Label" parent="Node2D/CanvasLayer"]
-modulate = Color(0, 0, 0, 1)
-self_modulate = Color(0, 0, 0, 1)
-z_index = 1
-offset_left = 292.0
-offset_top = 292.0
-offset_right = 830.0
-offset_bottom = 495.0
-text = "\"He still blames you. I tried to warn you, but you wouldn't listen. —D.\"
-"
-
-[node name="Paper2" type="Sprite2D" parent="Node2D/CanvasLayer"]
-position = Vector2(568, 317)
-scale = Vector2(1.5008328, 1.8738868)
-texture = ExtResource("4_lju8i")
 
 [connection signal="pressed" from="Node2D/CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
