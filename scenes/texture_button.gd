@@ -5,7 +5,6 @@ var open = false
 
 func _ready():
 	pressed.connect(_button_pressed)
-	
 
 func _button_pressed():
 	open = not open
