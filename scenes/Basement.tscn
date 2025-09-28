@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://s44i6tvkn8or"]
 
 [ext_resource type="Texture2D" uid="uid://byerl1j8ph01d" path="res://assets/BackgroundRooms/IMG_0297.jpeg" id="1_kvs36"]
-[ext_resource type="Script" uid="uid://d02i47d67s00v" path="res://scenes/interactables4.gd" id="2_kvs36"]
+[ext_resource type="Script" uid="uid://d02i47d67s00v" path="res://scripts/interactables4.gd" id="2_kvs36"]
 [ext_resource type="Texture2D" uid="uid://c6xpjhuyi68e2" path="res://assets/pills.png.png" id="3_3fd3q"]
 [ext_resource type="Texture2D" uid="uid://4ly22v0884j3" path="res://assets/pills_selected.png.png" id="4_jef7w"]
 [ext_resource type="Texture2D" uid="uid://dqmlwjvfsrvop" path="res://assets/Letter.png" id="5_v2gnl"]
-[ext_resource type="Script" uid="uid://re7ujg40e1xd" path="res://scenes/letter4.gd" id="6_3wm7j"]
+[ext_resource type="Script" uid="uid://re7ujg40e1xd" path="res://scripts/letter4.gd" id="6_3wm7j"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="7_rkwqm"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="8_plnnc"]
 [ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scripts/sanity_ui.gd" id="9_pbts2"]
