@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx12k3b3pvtru"
-path="res://.godot/imported/IMG_0300.jpeg-600f1749781c536c967238b910bf8749.ctex"
+uid="uid://dy2cc1guj2cs4"
+path="res://.godot/imported/EnvelopeSelect.png-9327ddf929761c2eb9770e9f59fbac2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/IMG_0300.jpeg"
-dest_files=["res://.godot/imported/IMG_0300.jpeg-600f1749781c536c967238b910bf8749.ctex"]
+source_file="res://assets/EnvelopeSelect.png"
+dest_files=["res://.godot/imported/EnvelopeSelect.png-9327ddf929761c2eb9770e9f59fbac2e.ctex"]
 
 [params]
 

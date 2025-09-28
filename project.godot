@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DaydreamGame"
-run/main_scene="uid://dqe4uwg5girix"
+run/main_scene="uid://cn0aifq3vxat"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
