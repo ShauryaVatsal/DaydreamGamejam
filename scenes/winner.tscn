@@ -1,3 +1,35 @@
-[gd_scene load_steps=0 format=3 uid="uid://b6fnck55inqmd"]
+[gd_scene load_steps=4 format=3 uid="uid://b1urc1e5sbsrg"]
+
+[ext_resource type="Texture2D" uid="uid://gapcd4d5rpr8" path="res://assets/family.jpeg" id="1_6vg2h"]
+[ext_resource type="Texture2D" uid="uid://bomhsbkik2yjj" path="res://assets/neutral-removebg-preview.png" id="2_osg38"]
+[ext_resource type="Texture2D" uid="uid://slklj2ekrnmi" path="res://assets/star.jpeg" id="3_74nyh"]
 
 [node name="Winner" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 319.5)
+scale = Vector2(4.196364, 3.5136614)
+texture = ExtResource("1_6vg2h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(28.596184, -4.1267457)
+scale = Vector2(0.2482784, 0.278485)
+texture = ExtResource("2_osg38")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -10.96187
+offset_top = 67.0241
+offset_right = 60.03813
+offset_bottom = 90.0241
+text = "YOU WIN"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Sprite2D"]
+position = Vector2(-1.9064178, -15.226288)
+amount = 13
+texture = ExtResource("3_74nyh")
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0, 0)
+spread = 180.0
+scale_amount_min = 0.0
+scale_amount_max = 0.1
