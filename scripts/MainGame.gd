@@ -133,8 +133,8 @@ func _physics_process(_delta):
 		velocity.x -= 1
 	if Input.is_action_pressed("Down") or Input.is_key_pressed(KEY_S):
 		velocity.y += 1
-	if Input.is_action_pressed("Jump") or Input.is_key_pressed(KEY_W):
-		velocity.y -= 1
+	#if Input.is_action_pressed("Jump") or Input.is_key_pressed(KEY_W):
+		#velocity.y -= 1
 	
 	# Apply movement
 	if velocity.length() > 0:

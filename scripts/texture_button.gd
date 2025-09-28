@@ -1,10 +1,12 @@
 extends TextureButton
 
 @onready var paper = $"../Paper"
+@onready var close_button = $"../Paper/TextureButton"
 var open = false
 
 func _ready():
 	pressed.connect(_on_button_pressed)
+	close_button.pressed.connect(_on_button_pressed)
 
 func _on_button_pressed():
 	open = not open

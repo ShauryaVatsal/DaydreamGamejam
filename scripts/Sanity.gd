@@ -8,4 +8,3 @@ func _ready():
 
 func _process(delta: float) -> void:
 	value = Globals.get_sanity()
-	print("updating sanity")
