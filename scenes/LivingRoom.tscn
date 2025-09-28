@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://ddljnyqv8d1tk" path="res://scripts/letter.gd" id="5_aalc5"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="6_ae7nm"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="7_8dded"]
-[ext_resource type="Script" path="res://scripts/sanity_ui.gd" id="8_v178v"]
+[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scripts/sanity_ui.gd" id="8_v178v"]
 [ext_resource type="Texture2D" uid="uid://ktmor7ygmvx" path="res://assets/wooden-arrow-sign-cartoon-style-isolated-white-background-game-element-vector-cartoon-illustration_273525-1896-Photoroom.png" id="9_aalc5"]
 [ext_resource type="Texture2D" uid="uid://dc4qsf6gimkuj" path="res://assets/withboarder.png.png" id="10_2iox7"]
 
@@ -58,14 +58,17 @@ modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = -1
+anchor_left = 0.0025
+anchor_top = -0.043636363
+anchor_right = 0.0025
+anchor_bottom = -0.043636363
 offset_left = 165.0
 offset_top = 44.0
 offset_right = 652.0
 offset_bottom = 544.0
 theme_override_fonts/font = ExtResource("6_ae7nm")
-theme_override_font_sizes/font_size = 84
-text = "It had to be you or her. I chose her. I'm sorry.
-"
+theme_override_font_sizes/font_size = 63
+text = "Lena, I know what you did. I’m not mad, but I need to tell the truth. - Eli"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3

@@ -2,8 +2,9 @@ extends CanvasModulate
 
 func _process(delta):
 	self.color = Color(
-	 int(Globals.get_sanity()*(255/200)),
-	 int(Globals.get_sanity()*(255/100)),
-	 int(Globals.get_sanity()*(255/100))
+		0.5 + Globals.get_sanity()*(1.0/200.0),
+		Globals.get_sanity()*(1.0/100.0),
+		Globals.get_sanity()*(1.0/100.0)
 	)
+	print(self.color, Globals.get_sanity())
 	
