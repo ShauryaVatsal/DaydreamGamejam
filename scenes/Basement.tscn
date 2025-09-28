@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://de0uqufm1qdrq"]
+[gd_scene load_steps=15 format=3 uid="uid://de0uqufm1qdrq"]
 
 [ext_resource type="Texture2D" uid="uid://byerl1j8ph01d" path="res://assets/BackgroundRooms/IMG_0297.jpeg" id="1_kvs36"]
 [ext_resource type="Script" uid="uid://d02i47d67s00v" path="res://scripts/interactables4.gd" id="2_kvs36"]
@@ -8,8 +8,11 @@
 [ext_resource type="Script" uid="uid://re7ujg40e1xd" path="res://scripts/letter4.gd" id="6_3wm7j"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="7_rkwqm"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="8_plnnc"]
+[ext_resource type="Texture2D" uid="uid://c7xyygvtywfl4" path="res://assets/360_F_614611127_ir33UnJra2ZDA5jAbqpANxy3xPzjrPEE-Photoroom.png" id="9_3wm7j"]
+[ext_resource type="Script" uid="uid://c8jsbw3cbqqba" path="res://scenes/letter_2.gd" id="9_jef7w"]
 [ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scripts/sanity_ui.gd" id="9_pbts2"]
 [ext_resource type="Texture2D" uid="uid://ktmor7ygmvx" path="res://assets/wooden-arrow-sign-cartoon-style-isolated-white-background-game-element-vector-cartoon-illustration_273525-1896-Photoroom.png" id="10_3fd3q"]
+[ext_resource type="Texture2D" uid="uid://dspy0rqiwcmpg" path="res://assets/360_F_614611127_ir33UnJra2ZDA5jAbqpANxy3xPzjrPEE.jpg" id="10_rkwqm"]
 [ext_resource type="Texture2D" uid="uid://dc4qsf6gimkuj" path="res://assets/withboarder.png.png" id="11_jef7w"]
 
 [node name="Basement" type="Node2D"]
@@ -79,6 +82,71 @@ autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="CloseButton" type="TextureButton" parent="Interactables/Letter"]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 11.0
+offset_right = 765.0
+offset_bottom = 113.0
+texture_normal = ExtResource("8_plnnc")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Cloth" type="TextureButton" parent="Interactables"]
+anchors_preset = -1
+anchor_left = -0.010416667
+anchor_top = 0.03549383
+anchor_right = 0.2517361
+anchor_bottom = 0.35493827
+offset_left = 279.0
+offset_top = 343.0
+offset_right = 210.0
+offset_bottom = 252.0
+texture_normal = ExtResource("9_3wm7j")
+texture_hover = ExtResource("10_rkwqm")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Letter2" type="TextureRect" parent="Interactables"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -401.0
+offset_top = 476.0
+offset_right = 399.0
+offset_bottom = 1026.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_v2gnl")
+stretch_mode = 5
+script = ExtResource("9_jef7w")
+metadata/_edit_use_anchors_ = true
+
+[node name="LetterText" type="Label" parent="Interactables/Letter2"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.06875
+anchor_top = -0.05090909
+anchor_right = 0.0875
+anchor_bottom = -0.05090909
+offset_left = 165.0
+offset_top = 44.0
+offset_right = 652.0
+offset_bottom = 544.0
+theme_override_fonts/font = ExtResource("7_rkwqm")
+theme_override_font_sizes/font_size = 84
+text = "A piece of blue fabric, it matches the dress Sorcerer Crow was making…"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="TextureButton" parent="Interactables/Letter2"]
 layout_mode = 0
 offset_left = 656.0
 offset_top = 11.0

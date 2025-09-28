@@ -18,7 +18,7 @@ func turnplace(boo):
 
 func _process(delta: float) -> void:
 	if not inHell:
-		set_sanity(get_sanity() - delta*3)
+		set_sanity(get_sanity() - delta*2)
 		if get_sanity() <= 0:
 			get_tree().change_scene_to_file("res://scenes/endgame scene.tscn")
 			inHell = true

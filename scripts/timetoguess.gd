@@ -5,9 +5,9 @@ extends Node2D
 @onready var wrong2 = $wrong2
 
 func _ready():
-	correct.presed.connect(_on_correct_pressed)
-	wrong.presed.connect(_on_wrong_pressed)
-	wrong1.presed.connect(_on_wrong_pressed)
+	correct.pressed.connect(_on_correct_pressed)
+	wrong.pressed.connect(_on_wrong_pressed)
+	wrong2.pressed.connect(_on_wrong_pressed)
 
 
 func _input2(event):

@@ -6,7 +6,6 @@ func _input(event):
 			get_tree().change_scene_to_file("res://scenes/MainGame.tscn")
 
 @onready var close_button = $CloseButton
-@onready var cloth = $"../Cloth"
 
 var open = false
 
@@ -16,13 +15,11 @@ func _ready() -> void:
 func open_letter():
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "position", Vector2(175, 50), 1).set_trans(Tween.TRANS_SINE)
-	cloth.visible = false
 	
 	
 func close_letter():
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "position", Vector2(175, 800), 1).set_trans(Tween.TRANS_SINE)
-	cloth.visible = true
 	
 func _on_button_pressed():
 	open = not open

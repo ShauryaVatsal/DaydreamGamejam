@@ -7,7 +7,7 @@
 [node name="Winner" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, 319.5)
+position = Vector2(575.99994, 319.5)
 scale = Vector2(4.196364, 3.5136614)
 texture = ExtResource("1_6vg2h")
 
