@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://8v3vxsm1ri4u"]
+
+[ext_resource type="Texture2D" uid="uid://b4wo2lt55qfkk" path="res://assets/hellbg.jpg" id="1_jkk87"]
+[ext_resource type="Texture2D" uid="uid://bu0psohxu470n" path="res://assets/Sanity_Bar.webp" id="2_idiul"]
+[ext_resource type="Script" uid="uid://btmvm12md3xda" path="res://scenes/Sanity.gd" id="3_rmo56"]
+
+[node name="Hell" type="Node2D"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="BackGround" type="TextureRect" parent="Node"]
+offset_right = 1150.0
+offset_bottom = 650.0
+texture = ExtResource("1_jkk87")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Node"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -367.0
+offset_right = 704.0
+offset_bottom = 383.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+texture = ExtResource("2_idiul")
+
+[node name="ProgressBar" type="ProgressBar" parent="Node/TextureRect"]
+layout_mode = 0
+offset_left = 141.00002
+offset_top = 338.0
+offset_right = 547.6276
+offset_bottom = 365.0
+tooltip_text = "Sanity"
+fill_mode = 1
+script = ExtResource("3_rmo56")
