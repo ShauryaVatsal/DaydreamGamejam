@@ -16,7 +16,7 @@
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_top = -111.0
-offset_right = 1148.0
+offset_right = 1195.0
 offset_bottom = 726.0
 texture = ExtResource("1_kvs36")
 expand_mode = 2
