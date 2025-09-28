@@ -1,0 +1,436 @@
+[gd_scene load_steps=1 format=3 uid="uid://cxr2qt8fex0h2"]
+
+[ext_resource type="Script" path="res://scripts/MainGame.gd" id="1_main"]
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(640, 360)
+
+[node name="PlayerSprite" type="ColorRect" parent="Player"]
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+color = Color(1, 1, 1, 0.7)
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
+
+[node name="Overworld" type="Node2D" parent="."]
+
+[node name="OverworldBackground" type="ColorRect" parent="Overworld"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.1, 0.3, 1)
+
+[node name="OverworldLabel" type="Label" parent="Overworld"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -50.0
+offset_right = 200.0
+offset_bottom = 50.0
+text = "OVERWORLD - The Haunted Manor"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 24
+font_color = Color(1, 1, 1, 1)
+
+[node name="Room1Door" type="Area2D" parent="Overworld"]
+position = Vector2(200, 300)
+
+[node name="Room1DoorCollision" type="CollisionShape2D" parent="Overworld/Room1Door"]
+
+[node name="Room1DoorSprite" type="ColorRect" parent="Overworld/Room1Door"]
+offset_left = -50.0
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 25.0
+color = Color(0.6, 0.3, 0.1, 1)
+
+[node name="Room1DoorLabel" type="Label" parent="Overworld/Room1Door"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "ROOM 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 16
+font_color = Color(1, 1, 1, 1)
+
+[node name="Room2Door" type="Area2D" parent="Overworld"]
+position = Vector2(1000, 300)
+
+[node name="Room2DoorCollision" type="CollisionShape2D" parent="Overworld/Room2Door"]
+
+[node name="Room2DoorSprite" type="ColorRect" parent="Overworld/Room2Door"]
+offset_left = -50.0
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 25.0
+color = Color(0.6, 0.3, 0.1, 1)
+
+[node name="Room2DoorLabel" type="Label" parent="Overworld/Room2Door"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "ROOM 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 16
+font_color = Color(1, 1, 1, 1)
+
+[node name="Room3Door" type="Area2D" parent="Overworld"]
+position = Vector2(640, 100)
+
+[node name="Room3DoorCollision" type="CollisionShape2D" parent="Overworld/Room3Door"]
+
+[node name="Room3DoorSprite" type="ColorRect" parent="Overworld/Room3Door"]
+offset_left = -50.0
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 25.0
+color = Color(0.6, 0.3, 0.1, 1)
+
+[node name="Room3DoorLabel" type="Label" parent="Overworld/Room3Door"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "ROOM 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 16
+font_color = Color(1, 1, 1, 1)
+
+[node name="Room1" type="Node2D" parent="."]
+visible = false
+
+[node name="Room1Background" type="ColorRect" parent="Room1"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.2, 0.1, 0.1, 1)
+
+[node name="Room1Label" type="Label" parent="Room1"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -300.0
+offset_right = 200.0
+offset_bottom = -250.0
+text = "BEDROOM - Search for clues!"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 20
+font_color = Color(1, 1, 1, 1)
+
+[node name="Clue1" type="Area2D" parent="Room1"]
+position = Vector2(300, 200)
+
+[node name="Clue1Collision" type="CollisionShape2D" parent="Room1/Clue1"]
+
+[node name="Clue1Sprite" type="ColorRect" parent="Room1/Clue1"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(1, 0, 0, 0.8)
+
+[node name="Clue1Label" type="Label" parent="Room1/Clue1"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 24
+font_color = Color(1, 1, 1, 1)
+
+[node name="Clue2" type="Area2D" parent="Room1"]
+position = Vector2(900, 400)
+
+[node name="Clue2Collision" type="CollisionShape2D" parent="Room1/Clue2"]
+
+[node name="Clue2Sprite" type="ColorRect" parent="Room1/Clue2"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0, 1, 0, 0.8)
+
+[node name="Clue2Label" type="Label" parent="Room1/Clue2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 24
+font_color = Color(1, 1, 1, 1)
+
+[node name="ExitDoor1" type="Area2D" parent="Room1"]
+position = Vector2(640, 600)
+
+[node name="ExitDoor1Collision" type="CollisionShape2D" parent="Room1/ExitDoor1"]
+
+[node name="ExitDoor1Sprite" type="ColorRect" parent="Room1/ExitDoor1"]
+offset_left = -50.0
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 25.0
+color = Color(0.6, 0.3, 0.1, 1)
+
+[node name="ExitDoor1Label" type="Label" parent="Room1/ExitDoor1"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "EXIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 16
+font_color = Color(1, 1, 1, 1)
+
+[node name="Room2" type="Node2D" parent="."]
+visible = false
+
+[node name="Room2Background" type="ColorRect" parent="Room2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.2, 0.1, 1)
+
+[node name="Room2Label" type="Label" parent="Room2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -300.0
+offset_right = 200.0
+offset_bottom = -250.0
+text = "KITCHEN - Search for clues!"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 20
+font_color = Color(1, 1, 1, 1)
+
+[node name="Clue3" type="Area2D" parent="Room2"]
+position = Vector2(400, 300)
+
+[node name="Clue3Collision" type="CollisionShape2D" parent="Room2/Clue3"]
+
+[node name="Clue3Sprite" type="ColorRect" parent="Room2/Clue3"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0, 0, 1, 0.8)
+
+[node name="Clue3Label" type="Label" parent="Room2/Clue3"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 24
+font_color = Color(1, 1, 1, 1)
+
+[node name="Clue4" type="Area2D" parent="Room2"]
+position = Vector2(800, 500)
+
+[node name="Clue4Collision" type="CollisionShape2D" parent="Room2/Clue4"]
+
+[node name="Clue4Sprite" type="ColorRect" parent="Room2/Clue4"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(1, 1, 0, 0.8)
+
+[node name="Clue4Label" type="Label" parent="Room2/Clue4"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 24
+font_color = Color(1, 1, 1, 1)
+
+[node name="ExitDoor2" type="Area2D" parent="Room2"]
+position = Vector2(640, 600)
+
+[node name="ExitDoor2Collision" type="CollisionShape2D" parent="Room2/ExitDoor2"]
+
+[node name="ExitDoor2Sprite" type="ColorRect" parent="Room2/ExitDoor2"]
+offset_left = -50.0
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 25.0
+color = Color(0.6, 0.3, 0.1, 1)
+
+[node name="ExitDoor2Label" type="Label" parent="Room2/ExitDoor2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "EXIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 16
+font_color = Color(1, 1, 1, 1)
+
+[node name="Room3" type="Node2D" parent="."]
+visible = false
+
+[node name="Room3Background" type="ColorRect" parent="Room3"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.1, 0.2, 1)
+
+[node name="Room3Label" type="Label" parent="Room3"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -300.0
+offset_right = 200.0
+offset_bottom = -250.0
+text = "STUDY - Search for clues!"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 20
+font_color = Color(1, 1, 1, 1)
+
+[node name="Clue5" type="Area2D" parent="Room3"]
+position = Vector2(500, 250)
+
+[node name="Clue5Collision" type="CollisionShape2D" parent="Room3/Clue5"]
+
+[node name="Clue5Sprite" type="ColorRect" parent="Room3/Clue5"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(1, 0, 1, 0.8)
+
+[node name="Clue5Label" type="Label" parent="Room3/Clue5"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 24
+font_color = Color(1, 1, 1, 1)
+
+[node name="Clue6" type="Area2D" parent="Room3"]
+position = Vector2(700, 450)
+
+[node name="Clue6Collision" type="CollisionShape2D" parent="Room3/Clue6"]
+
+[node name="Clue6Sprite" type="ColorRect" parent="Room3/Clue6"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0, 1, 1, 0.8)
+
+[node name="Clue6Label" type="Label" parent="Room3/Clue6"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 24
+font_color = Color(1, 1, 1, 1)
+
+[node name="ExitDoor3" type="Area2D" parent="Room3"]
+position = Vector2(640, 600)
+
+[node name="ExitDoor3Collision" type="CollisionShape2D" parent="Room3/ExitDoor3"]
+
+[node name="ExitDoor3Sprite" type="ColorRect" parent="Room3/ExitDoor3"]
+offset_left = -50.0
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 25.0
+color = Color(0.6, 0.3, 0.1, 1)
+
+[node name="ExitDoor3Label" type="Label" parent="Room3/ExitDoor3"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "EXIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 16
+font_color = Color(1, 1, 1, 1)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="SanityLabel" type="Label" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 50.0
+text = "Sanity: 100"
+horizontal_alignment = 2
+vertical_alignment = 1
+font_size = 18
+font_color = Color(1, 1, 1, 1)
+
+[node name="ClueLabel" type="Label" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -100.0
+offset_right = 300.0
+offset_bottom = 100.0
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 16
+font_color = Color(1, 1, 1, 1)
+
+[node name="Instructions" type="Label" parent="UI"]
+anchors_preset = 3
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -80.0
+offset_right = 300.0
+offset_bottom = -20.0
+text = "WASD/Arrow Keys to move • Click clues to investigate • Sanity drains in overworld"
+horizontal_alignment = 1
+vertical_alignment = 1
+font_size = 14
+font_color = Color(0.8, 0.8, 0.8, 1)
+
+[node name="SanityOverlay" type="ColorRect" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0)
+mouse_filter = 2
