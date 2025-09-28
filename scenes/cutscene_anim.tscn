@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=3 uid="uid://c7tqfgbychqcd"]
+
+[ext_resource type="Script" uid="uid://u07p5p02372n" path="res://scenes/anim.gd" id="1_b4a42"]
+[ext_resource type="Texture2D" uid="uid://b4wo2lt55qfkk" path="res://assets/hellbg.jpg" id="2_mnr8o"]
+[ext_resource type="Texture2D" uid="uid://bomhsbkik2yjj" path="res://assets/neutral-removebg-preview.png" id="3_iuvvr"]
+[ext_resource type="Texture2D" uid="uid://bwc2tdon823xo" path="res://assets/neutral_talk-removebg-preview.png" id="4_uudu6"]
+[ext_resource type="Texture2D" uid="uid://bt052b628i21w" path="res://assets/devil1 (1).png" id="5_bus7m"]
+[ext_resource type="Texture2D" uid="uid://nvsmu3kfk3ut" path="res://assets/devil1 (3).png" id="6_3lvlf"]
+[ext_resource type="Texture2D" uid="uid://cmhyv8jgkgwya" path="res://assets/devil1 (2).png" id="7_54kkm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fqo8s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_iuvvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uudu6")
+}],
+"loop": true,
+"name": &"Talk",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dsjru"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bus7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3lvlf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_54kkm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CutsceneAnim" type="Node2D"]
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("1_b4a42")
+
+[node name="BackGround" type="TextureRect" parent="Node"]
+z_index = -1
+offset_right = 1150.0
+offset_bottom = 650.0
+texture = ExtResource("2_mnr8o")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MC" type="AnimatedSprite2D" parent="Node"]
+position = Vector2(284, 291)
+sprite_frames = SubResource("SpriteFrames_fqo8s")
+animation = &"Talk"
+
+[node name="Label" type="Label" parent="Node/MC"]
+offset_left = -244.0
+offset_top = 271.0
+offset_right = -26.0
+offset_bottom = 340.0
+theme_override_font_sizes/font_size = 50
+text = "TEXT"
+
+[node name="Devil" type="AnimatedSprite2D" parent="Node"]
+position = Vector2(817, 201)
+sprite_frames = SubResource("SpriteFrames_dsjru")
+frame = 2
+frame_progress = 0.3342809
+
+[node name="Label" type="Label" parent="Node/Devil"]
+offset_left = -170.0
+offset_top = 178.0
+offset_right = 289.0
+offset_bottom = 381.0
+theme_override_font_sizes/font_size = 50
+text = "TEXT"
+autowrap_mode = 3
+
+[node name="Timer" type="Timer" parent="Node"]
+one_shot = true
+
+[node name="Button" type="Button" parent="Node"]
+offset_left = 464.0
+offset_top = 15.0
+offset_right = 616.0
+offset_bottom = 126.0
+text = "Play Scene"

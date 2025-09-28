@@ -4,4 +4,4 @@ func _ready() -> void:
 	pressed.connect(play)
 
 func play():
-	get_tree().change_scene_to_file("res://scenes/hell.tscn")
+	get_tree().change_scene_to_file("res://scenes/cutscene_anim.tscn")
