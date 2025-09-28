@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://ddljnyqv8d1tk" path="res://scripts/letter.gd" id="5_aalc5"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="6_ae7nm"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="7_8dded"]
-[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scenes/sanity_ui.gd" id="8_v178v"]
+[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scripts/sanity_ui.gd" id="8_v178v"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2iox7"]
 load_path = "res://.godot/imported/Envelope.png-1cc493d78e0ae5245b909e0a25cfdb7b.ctex"

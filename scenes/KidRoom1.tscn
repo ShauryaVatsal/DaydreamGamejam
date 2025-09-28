@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://b7giwcb4no7p0" path="res://scripts/texture_button.gd" id="4_w4j32"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="6_owu2s"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="7_bh3sb"]
-[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scenes/sanity_ui.gd" id="8_owu2s"]
+[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scripts/sanity_ui.gd" id="8_owu2s"]
 
 [node name="KidRoom1" type="Node2D"]
 

@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://cc07ooinmoq7n"]
 
 [ext_resource type="Texture2D" uid="uid://pj6oqpl10wvk" path="res://assets/BackgroundRooms/IMG_0296.jpeg" id="1_ukcw1"]
-[ext_resource type="Script" uid="uid://cffow0ac8c2kv" path="res://scenes/interactables2.gd" id="2_msblb"]
+[ext_resource type="Script" uid="uid://cffow0ac8c2kv" path="res://scripts/interactables2.gd" id="2_msblb"]
 [ext_resource type="Texture2D" uid="uid://bj75wrv4rl20k" path="res://assets/Knife.png" id="3_h4oy4"]
 [ext_resource type="Texture2D" uid="uid://o3x4s7rt31iv" path="res://assets/Knife_Selected.png" id="4_eknj5"]
 [ext_resource type="Texture2D" uid="uid://dqmlwjvfsrvop" path="res://assets/Letter.png" id="5_rhwvx"]
-[ext_resource type="Script" uid="uid://b5mkgiblfyti2" path="res://scenes/letter2.gd" id="6_kapmu"]
+[ext_resource type="Script" uid="uid://b5mkgiblfyti2" path="res://scripts/letter2.gd" id="6_kapmu"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="7_xacgk"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="8_86875"]
-[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scenes/sanity_ui.gd" id="9_msblb"]
+[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scripts/sanity_ui.gd" id="9_msblb"]
 
 [node name="Pat" type="Node2D"]
 
