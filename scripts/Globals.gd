@@ -10,3 +10,6 @@ func set_sanity(amount):
 	
 func get_sanity():
 	return sanity
+
+func turnplace(boo):
+	inHell = boo
