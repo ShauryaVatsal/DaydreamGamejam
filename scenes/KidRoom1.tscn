@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqh4w5x6y708a"]
+[gd_scene load_steps=9 format=3 uid="uid://4r70o32w7w10"]
 
 [ext_resource type="Texture2D" uid="uid://bklfvj4267q30" path="res://assets/BackgroundRooms/IMG_0299.webp" id="1_qrkvm"]
 [ext_resource type="Texture2D" uid="uid://pel14453n4k3" path="res://assets/pngtree-animal-pixel-art-bear-png-image_3132466-removebg-preview.png" id="2_vl11w"]
-[ext_resource type="Script" uid="uid://b7giwcb4no7p0" path="res://scenes/texture_button.gd" id="3_o0t10"]
 [ext_resource type="Texture2D" uid="uid://dqamfjd3iuhiy" path="res://assets/pngtree-animal-pixel-art-bear-png-image_3132466-removebg-preview-1.png.png" id="3_w4j32"]
 [ext_resource type="Texture2D" uid="uid://by3scxjr7gjke" path="res://assets/old-brown-paper-isolated-on-600nw-2512524259-removebg-preview (1).png" id="4_lju8i"]
+[ext_resource type="Script" uid="uid://b7giwcb4no7p0" path="res://scripts/texture_button.gd" id="4_w4j32"]
+[ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="6_owu2s"]
+[ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="7_bh3sb"]
+[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scenes/sanity_ui.gd" id="8_owu2s"]
 
 [node name="KidRoom1" type="Node2D"]
 
@@ -25,7 +28,7 @@ offset_bottom = 631.0
 scale = Vector2(0.34, 0.34)
 texture_normal = ExtResource("2_vl11w")
 texture_hover = ExtResource("3_w4j32")
-script = ExtResource("3_o0t10")
+script = ExtResource("4_w4j32")
 
 [node name="Paper" type="Sprite2D" parent="Node2D/CanvasLayer"]
 position = Vector2(574, 1005)
@@ -36,16 +39,29 @@ texture = ExtResource("4_lju8i")
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 z_index = 2
-offset_left = -228.53976
-offset_top = -74.177376
-offset_right = 313.46024
-offset_bottom = 188.98013
+offset_left = -222.54309
+offset_top = -101.927185
+offset_right = 132.13177
+offset_bottom = 68.01987
 scale = Vector2(1.3, 1.3)
-text = "\"Clara, I know I wasn’t there when you needed 
-me most. But I found out the truth about 
-Mom’s will. We need to talk before it's too late. 
-You deserve to know what he did.\"
- —Michael
-"
+theme_override_fonts/font = ExtResource("6_owu2s")
+theme_override_font_sizes/font_size = 40
+text = "Forgive me..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 1
+
+[node name="TextureButton" type="TextureButton" parent="Node2D/CanvasLayer/Paper"]
+offset_left = 220.5442
+offset_top = -150.48935
+offset_right = 296.50204
+offset_bottom = -92.85513
+texture_normal = ExtResource("7_bh3sb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource("8_owu2s")
 
 [connection signal="pressed" from="Node2D/CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]

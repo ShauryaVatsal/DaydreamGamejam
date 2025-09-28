@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://cc07ooinmoq7n"]
+
+[ext_resource type="Texture2D" uid="uid://pj6oqpl10wvk" path="res://assets/BackgroundRooms/IMG_0296.jpeg" id="1_ukcw1"]
+[ext_resource type="Script" uid="uid://cffow0ac8c2kv" path="res://scenes/interactables2.gd" id="2_msblb"]
+[ext_resource type="Texture2D" uid="uid://bj75wrv4rl20k" path="res://assets/Knife.png" id="3_h4oy4"]
+[ext_resource type="Texture2D" uid="uid://o3x4s7rt31iv" path="res://assets/Knife_Selected.png" id="4_eknj5"]
+[ext_resource type="Texture2D" uid="uid://dqmlwjvfsrvop" path="res://assets/Letter.png" id="5_rhwvx"]
+[ext_resource type="Script" uid="uid://b5mkgiblfyti2" path="res://scenes/letter2.gd" id="6_kapmu"]
+[ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="7_xacgk"]
+[ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="8_86875"]
+[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scenes/sanity_ui.gd" id="9_msblb"]
+
+[node name="Pat" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -111.0
+offset_right = 1148.0
+offset_bottom = 726.0
+texture = ExtResource("1_ukcw1")
+expand_mode = 2
+
+[node name="Interactables" type="Node" parent="."]
+script = ExtResource("2_msblb")
+
+[node name="Knife" type="TextureButton" parent="Interactables"]
+anchors_preset = -1
+anchor_left = -0.010416667
+anchor_top = 0.03549383
+anchor_right = 0.15711805
+anchor_bottom = 0.24845679
+offset_left = 845.0
+offset_top = 271.0
+offset_right = 776.0
+offset_bottom = 180.0
+texture_normal = ExtResource("3_h4oy4")
+texture_hover = ExtResource("4_eknj5")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Letter" type="TextureRect" parent="Interactables"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -401.0
+offset_top = 476.0
+offset_right = 399.0
+offset_bottom = 1026.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rhwvx")
+stretch_mode = 5
+script = ExtResource("6_kapmu")
+metadata/_edit_use_anchors_ = true
+
+[node name="LetterText" type="Label" parent="Interactables/Letter"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0075
+anchor_top = -0.056363635
+anchor_right = 0.0075
+anchor_bottom = -0.056363635
+offset_left = 165.0
+offset_top = 44.0
+offset_right = 652.0
+offset_bottom = 544.0
+theme_override_fonts/font = ExtResource("7_xacgk")
+theme_override_font_sizes/font_size = 84
+text = "A bloody knife...?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="TextureButton" parent="Interactables/Letter"]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 11.0
+offset_right = 765.0
+offset_bottom = 113.0
+texture_normal = ExtResource("8_86875")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource("9_msblb")
