@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqyatlkyq8iwu"]
+[gd_scene load_steps=9 format=3 uid="uid://cn0aifq3vxat"]
 
 [ext_resource type="Texture2D" uid="uid://crh64vi50g3yb" path="res://assets/BackgroundRooms/IMG_0291.jpeg" id="1_0vkie"]
-[ext_resource type="Script" path="res://scripts/interactables.gd" id="2_8dded"]
+[ext_resource type="Script" uid="uid://bqnom4k18gwwk" path="res://scripts/interactables.gd" id="2_8dded"]
 [ext_resource type="Texture2D" uid="uid://dy2cc1guj2cs4" path="res://assets/EnvelopeSelect.png" id="3_v178v"]
 [ext_resource type="Texture2D" uid="uid://dqmlwjvfsrvop" path="res://assets/Letter.png" id="4_2oubn"]
-[ext_resource type="Script" path="res://scripts/letter.gd" id="5_aalc5"]
+[ext_resource type="Script" uid="uid://ddljnyqv8d1tk" path="res://scripts/letter.gd" id="5_aalc5"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="6_ae7nm"]
+[ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="7_8dded"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2iox7"]
 load_path = "res://.godot/imported/Envelope.png-1cc493d78e0ae5245b909e0a25cfdb7b.ctex"
@@ -30,6 +31,7 @@ texture_hover = ExtResource("3_v178v")
 ignore_texture_size = true
 stretch_mode = 0
 flip_v = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Letter" type="TextureRect" parent="Interactables"]
 anchors_preset = 8
@@ -46,21 +48,33 @@ grow_vertical = 2
 texture = ExtResource("4_2oubn")
 stretch_mode = 5
 script = ExtResource("5_aalc5")
+metadata/_edit_use_anchors_ = true
 
 [node name="LetterText" type="Label" parent="Interactables/Letter"]
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = -1
-offset_left = 150.0
-offset_top = 50.0
-offset_right = 650.0
-offset_bottom = 550.0
+offset_left = 165.0
+offset_top = 44.0
+offset_right = 652.0
+offset_bottom = 544.0
 theme_override_fonts/font = ExtResource("6_ae7nm")
-theme_override_font_sizes/font_size = 46
-text = "Clara, I know I was not there when you needed me most. But I found out the truth about the will of our mom. We need to talk before it's too late. You deserve to know what he did.
- —Michael
+theme_override_font_sizes/font_size = 84
+text = "It had to be you or her. I chose her. I'm sorry.
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseButton" type="TextureButton" parent="Interactables/Letter"]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 11.0
+offset_right = 765.0
+offset_bottom = 113.0
+texture_normal = ExtResource("7_8dded")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true

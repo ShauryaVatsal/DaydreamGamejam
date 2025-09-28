@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4wo2lt55qfkk" path="res://assets/hellbg.jpg" id="1_jkk87"]
 [ext_resource type="Texture2D" uid="uid://bu0psohxu470n" path="res://assets/Sanity_Bar.webp" id="2_idiul"]
-[ext_resource type="Script" uid="uid://btmvm12md3xda" path="res://scenes/Sanity.gd" id="3_rmo56"]
+[ext_resource type="Script" uid="uid://btmvm12md3xda" path="res://scripts/Sanity.gd" id="3_rmo56"]
 
 [node name="Hell" type="Node2D"]
 
