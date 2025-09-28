@@ -1,5 +1,6 @@
-[gd_scene load_steps=57 format=3 uid="uid://ce7o6w3i6dmq2"]
+[gd_scene load_steps=58 format=3 uid="uid://ce7o6w3i6dmq2"]
 
+[ext_resource type="Script" uid="uid://cqrm4gnlqlgtl" path="res://scenes/sanity_label.gd" id="1_7f7ne"]
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_t4bxf"]
 [ext_resource type="Texture2D" uid="uid://cwwqr6mv43s3r" path="res://assets/29a39f6d55f61dc9bd058ff5954629d8914ee249-removebg-preview.png" id="2_xej52"]
 [ext_resource type="Script" uid="uid://dh3t23mtam271" path="res://scenes/rooms.gd" id="3_1hpqh"]
@@ -536,6 +537,7 @@ offset_bottom = 50.0
 text = "Sanity: 100"
 horizontal_alignment = 2
 vertical_alignment = 1
+script = ExtResource("1_7f7ne")
 
 [node name="ClueLabel" type="Label" parent="UI"]
 anchors_preset = 8
