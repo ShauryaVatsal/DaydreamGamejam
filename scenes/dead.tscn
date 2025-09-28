@@ -1,0 +1,151 @@
+[gd_scene load_steps=20 format=3 uid="uid://d1kikrtkc1kf1"]
+
+[ext_resource type="Texture2D" uid="uid://bbxt8gsj8kn8i" path="res://assets/flippedghots.png" id="1_tnkcu"]
+[ext_resource type="Texture2D" uid="uid://b4wo2lt55qfkk" path="res://assets/hellbg.jpg" id="2_2s5mr"]
+[ext_resource type="Texture2D" uid="uid://ddcfjo8kfd045" path="res://assets/spirte_sheet-removebg-preview.png" id="2_70h2h"]
+[ext_resource type="Texture2D" uid="uid://ddb8ugdhbjek2" path="res://assets/backgameoverdone.png" id="3_70h2h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dn0c2"]
+atlas = ExtResource("1_tnkcu")
+region = Rect2(1001, 0, 143, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5k6an"]
+atlas = ExtResource("1_tnkcu")
+region = Rect2(858, 0, 143, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7112"]
+atlas = ExtResource("1_tnkcu")
+region = Rect2(715, 0, 143, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2800"]
+atlas = ExtResource("1_tnkcu")
+region = Rect2(572, 0, 143, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk8rp"]
+atlas = ExtResource("1_tnkcu")
+region = Rect2(429, 0, 143, 170)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wnlw2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dn0c2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5k6an")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7112")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2800")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fk8rp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kar5w"]
+radius = 95.0
+height = 228.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dn0c2"]
+radius = 66.0
+height = 220.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnlw2"]
+atlas = ExtResource("2_70h2h")
+region = Rect2(68, 0, 68, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kar5w"]
+atlas = ExtResource("2_70h2h")
+region = Rect2(136, 0, 68, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lilf"]
+atlas = ExtResource("2_70h2h")
+region = Rect2(204, 0, 68, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4rch"]
+atlas = ExtResource("2_70h2h")
+region = Rect2(272, 0, 68, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xr3n6"]
+atlas = ExtResource("2_70h2h")
+region = Rect2(340, 0, 68, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0dsp"]
+atlas = ExtResource("2_70h2h")
+region = Rect2(408, 0, 68, 81)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lm3p2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnlw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kar5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lilf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4rch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xr3n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0dsp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Dead" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/CharacterBody2D"]
+position = Vector2(1125.2501, 508.24826)
+scale = Vector2(2.1853147, 2.1853147)
+sprite_frames = SubResource("SpriteFrames_wnlw2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D"]
+position = Vector2(1072, 536)
+shape = SubResource("CapsuleShape2D_kar5w")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D2"]
+position = Vector2(80, 526)
+shape = SubResource("CapsuleShape2D_dn0c2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/CharacterBody2D2"]
+position = Vector2(39, 501.74997)
+scale = Vector2(4.5, 4.4999995)
+sprite_frames = SubResource("SpriteFrames_lm3p2")
+
+[node name="Label" type="Label" parent="Node2D/CharacterBody2D2/AnimatedSprite2D"]
+offset_left = 25.55556
+offset_right = 190.55556
+offset_bottom = 23.0
+scale = Vector2(0.4, 0.4)
+text = "You Are Stuck in Hell!"
+
+[node name="Hellbg" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(587.5001, 331)
+scale = Vector2(0.2584444, 0.228)
+texture = ExtResource("2_2s5mr")
+
+[node name="Backgameoverdone" type="Sprite2D" parent="."]
+position = Vector2(625.3334, 176.24997)
+scale = Vector2(0.5993055, 0.5993055)
+texture = ExtResource("3_70h2h")
