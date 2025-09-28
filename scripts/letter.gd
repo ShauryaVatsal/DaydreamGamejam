@@ -1,12 +1,7 @@
 extends TextureRect
 
-@onready var close_button = $CloseButton
-
+@onready var envelope = get_node("../Interactables/Sprite2D")
 var open = false
-
-func _ready() -> void:
-	close_button.pressed.connect(_on_button_pressed)
-
 func open_letter():
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "position", Vector2(175, 50), 1).set_trans(Tween.TRANS_SINE)

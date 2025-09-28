@@ -1,19 +1,259 @@
-[gd_scene load_steps=1 format=3 uid="uid://cxr2qt8fex0h2"]
+[gd_scene load_steps=45 format=3 uid="uid://ce7o6w3i6dmq2"]
 
-[ext_resource type="Script" path="res://scripts/MainGame.gd" id="1_main"]
+[ext_resource type="Script" uid="uid://bwawscerxtm8j" path="res://scenes/player.gd" id="1_t4bxf"]
+[ext_resource type="Texture2D" uid="uid://cwwqr6mv43s3r" path="res://assets/29a39f6d55f61dc9bd058ff5954629d8914ee249-removebg-preview.png" id="2_xej52"]
+[ext_resource type="Texture2D" uid="uid://cb20rnhvc1spg" path="res://assets/seamless-texture-cartoon-grass-green-plants-pattern-for-wallpaper-illustration-backdrop-organic-background-for-the-game-gui-vector.jpg" id="3_t4bxf"]
+[ext_resource type="Texture2D" uid="uid://bbxt8gsj8kn8i" path="res://assets/flippedghots.png" id="3_x628s"]
+[ext_resource type="Texture2D" uid="uid://b83887wtw8y1t" path="res://assets/Free-Ghost-Pixel-Art-Sprite-Sheets2-Photoroom.png" id="4_x628s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fyak"]
+atlas = ExtResource("4_x628s")
+region = Rect2(142, 0, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpdtd"]
+atlas = ExtResource("4_x628s")
+region = Rect2(284, 0, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hpqh"]
+atlas = ExtResource("4_x628s")
+region = Rect2(426, 0, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f7ne"]
+atlas = ExtResource("4_x628s")
+region = Rect2(568, 0, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtryj"]
+atlas = ExtResource("4_x628s")
+region = Rect2(710, 0, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vs82q"]
+atlas = ExtResource("4_x628s")
+region = Rect2(142, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsiih"]
+atlas = ExtResource("4_x628s")
+region = Rect2(284, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7d840"]
+atlas = ExtResource("4_x628s")
+region = Rect2(426, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utvnp"]
+atlas = ExtResource("4_x628s")
+region = Rect2(568, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtnxl"]
+atlas = ExtResource("4_x628s")
+region = Rect2(710, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16xnu"]
+atlas = ExtResource("4_x628s")
+region = Rect2(852, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lupq4"]
+atlas = ExtResource("4_x628s")
+region = Rect2(994, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x628s"]
+atlas = ExtResource("4_x628s")
+region = Rect2(142, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbbka"]
+atlas = ExtResource("4_x628s")
+region = Rect2(284, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31l0t"]
+atlas = ExtResource("4_x628s")
+region = Rect2(426, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnwqk"]
+atlas = ExtResource("4_x628s")
+region = Rect2(568, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omf1d"]
+atlas = ExtResource("4_x628s")
+region = Rect2(710, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5smc"]
+atlas = ExtResource("4_x628s")
+region = Rect2(852, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6oxnh"]
+atlas = ExtResource("4_x628s")
+region = Rect2(994, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h46e"]
+atlas = ExtResource("3_x628s")
+region = Rect2(142, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cf4d6"]
+atlas = ExtResource("3_x628s")
+region = Rect2(284, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0bag"]
+atlas = ExtResource("3_x628s")
+region = Rect2(426, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hogh4"]
+atlas = ExtResource("3_x628s")
+region = Rect2(568, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1eed"]
+atlas = ExtResource("3_x628s")
+region = Rect2(710, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_av4dx"]
+atlas = ExtResource("3_x628s")
+region = Rect2(852, 340, 142, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e2px"]
+atlas = ExtResource("3_x628s")
+region = Rect2(994, 340, 142, 170)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4h46e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fyak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpdtd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hpqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f7ne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtryj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vs82q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsiih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7d840")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utvnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtnxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16xnu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lupq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x628s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbbka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31l0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnwqk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omf1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5smc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6oxnh")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h46e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cf4d6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0bag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hogh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1eed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_av4dx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e2px")
+}],
+"loop": true,
+"name": &"runback",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4bxf"]
+size = Vector2(26.766468, 273.52942)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x628s"]
+size = Vector2(20, 142.44653)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fyak"]
+size = Vector2(576.3752, 42.072266)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpdtd"]
+size = Vector2(57.638634, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hpqh"]
+size = Vector2(37.222076, 124.03468)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7f7ne"]
+size = Vector2(100.04226, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtryj"]
+size = Vector2(48.739113, 131.50723)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vs82q"]
+size = Vector2(139.7749, 28.163315)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qsiih"]
+size = Vector2(68.63217, 165.9552)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7d840"]
+size = Vector2(141.8689, 94.43498)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utvnp"]
+size = Vector2(56.06813, 23.16333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtnxl"]
+size = Vector2(100.512344, 20)
 
 [node name="MainGame" type="Node2D"]
-script = ExtResource("1_main")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(640, 360)
+script = ExtResource("1_t4bxf")
 
-[node name="PlayerSprite" type="ColorRect" parent="Player"]
-offset_left = -15.0
-offset_top = -15.0
-offset_right = 15.0
-offset_bottom = 15.0
-color = Color(1, 1, 1, 0.7)
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="Player"]
+z_index = 1
+position = Vector2(-416, 235)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_4h46e")
+animation = &"Run"
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
 
@@ -35,33 +275,43 @@ offset_left = -200.0
 offset_top = -50.0
 offset_right = 200.0
 offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "OVERWORLD - The Haunted Manor"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 24
-font_color = Color(1, 1, 1, 1)
 
 [node name="Room1Door" type="Area2D" parent="Overworld"]
-position = Vector2(200, 300)
+position = Vector2(120, 164)
+scale = Vector2(1.2, 1.2)
 
 [node name="Room1DoorCollision" type="CollisionShape2D" parent="Overworld/Room1Door"]
+scale = Vector2(1.2, 1.2)
 
 [node name="Room1DoorSprite" type="ColorRect" parent="Overworld/Room1Door"]
 offset_left = -50.0
-offset_top = -25.0
+offset_top = -24.0
 offset_right = 50.0
-offset_bottom = 25.0
+offset_bottom = 26.0
+scale = Vector2(1.2, 1.2)
 color = Color(0.6, 0.3, 0.1, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Room1DoorLabel" type="Label" parent="Overworld/Room1Door"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-text = "ROOM 1"
+offset_left = -45.333336
+offset_top = -11.5
+offset_right = 18.666664
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+text = "Kid 
+Bedroom"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 16
-font_color = Color(1, 1, 1, 1)
 
 [node name="Room2Door" type="Area2D" parent="Overworld"]
 position = Vector2(1000, 300)
@@ -82,8 +332,6 @@ anchor_bottom = 1.0
 text = "ROOM 2"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 16
-font_color = Color(1, 1, 1, 1)
 
 [node name="Room3Door" type="Area2D" parent="Overworld"]
 position = Vector2(640, 100)
@@ -104,8 +352,6 @@ anchor_bottom = 1.0
 text = "ROOM 3"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 16
-font_color = Color(1, 1, 1, 1)
 
 [node name="Room1" type="Node2D" parent="."]
 visible = false
@@ -129,8 +375,6 @@ offset_bottom = -250.0
 text = "BEDROOM - Search for clues!"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 20
-font_color = Color(1, 1, 1, 1)
 
 [node name="Clue1" type="Area2D" parent="Room1"]
 position = Vector2(300, 200)
@@ -151,8 +395,6 @@ anchor_bottom = 1.0
 text = "?"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 24
-font_color = Color(1, 1, 1, 1)
 
 [node name="Clue2" type="Area2D" parent="Room1"]
 position = Vector2(900, 400)
@@ -173,8 +415,6 @@ anchor_bottom = 1.0
 text = "?"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 24
-font_color = Color(1, 1, 1, 1)
 
 [node name="ExitDoor1" type="Area2D" parent="Room1"]
 position = Vector2(640, 600)
@@ -195,8 +435,6 @@ anchor_bottom = 1.0
 text = "EXIT"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 16
-font_color = Color(1, 1, 1, 1)
 
 [node name="Room2" type="Node2D" parent="."]
 visible = false
@@ -220,8 +458,6 @@ offset_bottom = -250.0
 text = "KITCHEN - Search for clues!"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 20
-font_color = Color(1, 1, 1, 1)
 
 [node name="Clue3" type="Area2D" parent="Room2"]
 position = Vector2(400, 300)
@@ -242,8 +478,6 @@ anchor_bottom = 1.0
 text = "?"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 24
-font_color = Color(1, 1, 1, 1)
 
 [node name="Clue4" type="Area2D" parent="Room2"]
 position = Vector2(800, 500)
@@ -264,8 +498,6 @@ anchor_bottom = 1.0
 text = "?"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 24
-font_color = Color(1, 1, 1, 1)
 
 [node name="ExitDoor2" type="Area2D" parent="Room2"]
 position = Vector2(640, 600)
@@ -286,8 +518,6 @@ anchor_bottom = 1.0
 text = "EXIT"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 16
-font_color = Color(1, 1, 1, 1)
 
 [node name="Room3" type="Node2D" parent="."]
 visible = false
@@ -311,8 +541,6 @@ offset_bottom = -250.0
 text = "STUDY - Search for clues!"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 20
-font_color = Color(1, 1, 1, 1)
 
 [node name="Clue5" type="Area2D" parent="Room3"]
 position = Vector2(500, 250)
@@ -333,8 +561,6 @@ anchor_bottom = 1.0
 text = "?"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 24
-font_color = Color(1, 1, 1, 1)
 
 [node name="Clue6" type="Area2D" parent="Room3"]
 position = Vector2(700, 450)
@@ -355,8 +581,6 @@ anchor_bottom = 1.0
 text = "?"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 24
-font_color = Color(1, 1, 1, 1)
 
 [node name="ExitDoor3" type="Area2D" parent="Room3"]
 position = Vector2(640, 600)
@@ -377,8 +601,6 @@ anchor_bottom = 1.0
 text = "EXIT"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 16
-font_color = Color(1, 1, 1, 1)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -393,8 +615,6 @@ offset_bottom = 50.0
 text = "Sanity: 100"
 horizontal_alignment = 2
 vertical_alignment = 1
-font_size = 18
-font_color = Color(1, 1, 1, 1)
 
 [node name="ClueLabel" type="Label" parent="UI"]
 anchors_preset = 8
@@ -406,31 +626,108 @@ offset_left = -300.0
 offset_top = -100.0
 offset_right = 300.0
 offset_bottom = 100.0
-text = ""
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 16
-font_color = Color(1, 1, 1, 1)
 
 [node name="Instructions" type="Label" parent="UI"]
-anchors_preset = 3
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -300.0
-offset_top = -80.0
-offset_right = 300.0
-offset_bottom = -20.0
+offset_left = -297.5
+offset_top = -669.0
+offset_right = 329.5
+offset_bottom = -609.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 19
 text = "WASD/Arrow Keys to move • Click clues to investigate • Sanity drains in overworld"
 horizontal_alignment = 1
 vertical_alignment = 1
-font_size = 14
-font_color = Color(0.8, 0.8, 0.8, 1)
 
 [node name="SanityOverlay" type="ColorRect" parent="UI"]
+z_index = -2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0, 0, 0, 0)
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(578.25006, 332)
+scale = Vector2(1.9102142, 1.6836983)
+texture = ExtResource("2_xej52")
+
+[node name="SeamlessTextureCartoonGrassGreenPlantsPatternForWallpaperIllustrationBackdropOrganicBackgroundForTheGameGuiVector" type="Sprite2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview"]
+z_index = -6
+position = Vector2(4.318878, -10.987732)
+scale = Vector2(0.62446254, 0.504841)
+texture = ExtResource("3_t4bxf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/SeamlessTextureCartoonGrassGreenPlantsPatternForWallpaperIllustrationBackdropOrganicBackgroundForTheGameGuiVector"]
+position = Vector2(-476.5569, -235)
+scale = Vector2(0.9999999, 1)
+shape = SubResource("RectangleShape2D_t4bxf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview"]
+
+[node name="boarder1" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/StaticBody2D"]
+position = Vector2(-203.773, 123.58591)
+scale = Vector2(1, 0.9999999)
+shape = SubResource("RectangleShape2D_x628s")
+
+[node name="boarder2" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/StaticBody2D"]
+position = Vector2(72.89755, 204.65744)
+scale = Vector2(1, 0.9999998)
+shape = SubResource("RectangleShape2D_7fyak")
+
+[node name="boarder3" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/StaticBody2D"]
+position = Vector2(-222.06882, 59.393005)
+scale = Vector2(1, 0.99999994)
+shape = SubResource("RectangleShape2D_fpdtd")
+
+[node name="boarder4" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/StaticBody2D"]
+position = Vector2(-266.35815, 2.1271667)
+scale = Vector2(1, 0.99999994)
+shape = SubResource("RectangleShape2D_1hpqh")
+
+[node name="boarder5" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/StaticBody2D"]
+position = Vector2(-234.42456, -197.77888)
+scale = Vector2(1, 0.99999994)
+shape = SubResource("RectangleShape2D_7f7ne")
+
+[node name="boarder6" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/StaticBody2D"]
+position = Vector2(-160.61089, -139.401)
+scale = Vector2(1, 0.9999997)
+shape = SubResource("RectangleShape2D_rtryj")
+
+[node name="boarder7" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/StaticBody2D"]
+position = Vector2(-67.92435, -200.15462)
+scale = Vector2(1, 0.9999997)
+shape = SubResource("RectangleShape2D_vs82q")
+
+[node name="boarder8" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/StaticBody2D"]
+position = Vector2(35.17871, -104.953026)
+scale = Vector2(1, 0.9999998)
+shape = SubResource("RectangleShape2D_qsiih")
+
+[node name="boarder9" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/StaticBody2D"]
+position = Vector2(-2.4866638, 25.835938)
+scale = Vector2(1, 0.9999996)
+shape = SubResource("RectangleShape2D_7d840")
+
+[node name="boarder10" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/StaticBody2D"]
+position = Vector2(-99.88469, 62.659668)
+scale = Vector2(1, 0.9999997)
+shape = SubResource("RectangleShape2D_utvnp")
+
+[node name="boarder11" type="CollisionShape2D" parent="29a39f6d55f61Dc9Bd058Ff5954629d8914Ee249RemovebgPreview/StaticBody2D"]
+position = Vector2(119.22745, -66.52023)
+scale = Vector2(1, 0.9999999)
+shape = SubResource("RectangleShape2D_vtnxl")
