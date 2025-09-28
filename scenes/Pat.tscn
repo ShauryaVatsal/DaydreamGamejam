@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cc07ooinmoq7n"]
+[gd_scene load_steps=10 format=3 uid="uid://cc07ooinmoq7n"]
 
 [ext_resource type="Texture2D" uid="uid://pj6oqpl10wvk" path="res://assets/BackgroundRooms/IMG_0296.jpeg" id="1_ukcw1"]
 [ext_resource type="Script" uid="uid://cffow0ac8c2kv" path="res://scenes/interactables2.gd" id="2_msblb"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://b5mkgiblfyti2" path="res://scenes/letter2.gd" id="6_kapmu"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="7_xacgk"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="8_86875"]
+[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scenes/sanity_ui.gd" id="9_msblb"]
 
 [node name="Pat" type="Node2D"]
 
@@ -86,3 +87,6 @@ texture_normal = ExtResource("8_86875")
 ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource("9_msblb")

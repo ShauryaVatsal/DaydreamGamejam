@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cn0aifq3vxat"]
+[gd_scene load_steps=10 format=3 uid="uid://cn0aifq3vxat"]
 
 [ext_resource type="Texture2D" uid="uid://crh64vi50g3yb" path="res://assets/BackgroundRooms/IMG_0291.jpeg" id="1_0vkie"]
 [ext_resource type="Script" uid="uid://bqnom4k18gwwk" path="res://scripts/interactables.gd" id="2_8dded"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://ddljnyqv8d1tk" path="res://scripts/letter.gd" id="5_aalc5"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="6_ae7nm"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="7_8dded"]
+[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scenes/sanity_ui.gd" id="8_v178v"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2iox7"]
 load_path = "res://.godot/imported/Envelope.png-1cc493d78e0ae5245b909e0a25cfdb7b.ctex"
@@ -78,3 +79,6 @@ texture_normal = ExtResource("7_8dded")
 ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource("8_v178v")

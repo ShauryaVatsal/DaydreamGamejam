@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://4r70o32w7w10"]
+[gd_scene load_steps=9 format=3 uid="uid://4r70o32w7w10"]
 
 [ext_resource type="Texture2D" uid="uid://bklfvj4267q30" path="res://assets/BackgroundRooms/IMG_0299.webp" id="1_qrkvm"]
 [ext_resource type="Texture2D" uid="uid://pel14453n4k3" path="res://assets/pngtree-animal-pixel-art-bear-png-image_3132466-removebg-preview.png" id="2_vl11w"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b7giwcb4no7p0" path="res://scripts/texture_button.gd" id="4_w4j32"]
 [ext_resource type="FontFile" uid="uid://bj50db75v5c4b" path="res://assets/pixelfont.ttf" id="6_owu2s"]
 [ext_resource type="Texture2D" uid="uid://7yt26l7hgs6u" path="res://assets/cancel.png" id="7_bh3sb"]
+[ext_resource type="Script" uid="uid://cqlbqrdlgl1qe" path="res://scenes/sanity_ui.gd" id="8_owu2s"]
 
 [node name="KidRoom1" type="Node2D"]
 
@@ -59,5 +60,8 @@ offset_bottom = -92.85513
 texture_normal = ExtResource("7_bh3sb")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource("8_owu2s")
 
 [connection signal="pressed" from="Node2D/CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
