@@ -5,6 +5,13 @@ extends Node2D
 @onready var Room3 = $Room3Door
 @onready var Room4 = $Room4Door
 
+func _input(event):
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_ESCAPE:
+			get_tree().change_scene_to_file("res://scenes/MainGame.tscn")
+
+
+
 func tpRoom(roomnum):
 	match  roomnum:
 		1:	

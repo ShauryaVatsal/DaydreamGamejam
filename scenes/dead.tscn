@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://d1kikrtkc1kf1"]
+[gd_scene load_steps=21 format=3 uid="uid://d1kikrtkc1kf1"]
 
+[ext_resource type="Script" uid="uid://c3xc5faaedfq5" path="res://scripts/deadnode.gd" id="1_70h2h"]
 [ext_resource type="Texture2D" uid="uid://bbxt8gsj8kn8i" path="res://assets/flippedghots.png" id="1_tnkcu"]
 [ext_resource type="Texture2D" uid="uid://b4wo2lt55qfkk" path="res://assets/hellbg.jpg" id="2_2s5mr"]
 [ext_resource type="Texture2D" uid="uid://ddcfjo8kfd045" path="res://assets/spirte_sheet-removebg-preview.png" id="2_70h2h"]
@@ -108,31 +109,32 @@ animations = [{
 
 [node name="Dead" type="Node2D"]
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="deadnode" type="Node2D" parent="."]
+script = ExtResource("1_70h2h")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="deadnode"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="deadnode/CharacterBody2D"]
 position = Vector2(1125.2501, 508.24826)
 scale = Vector2(2.1853147, 2.1853147)
 sprite_frames = SubResource("SpriteFrames_wnlw2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deadnode/CharacterBody2D"]
 position = Vector2(1072, 536)
 shape = SubResource("CapsuleShape2D_kar5w")
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="Node2D"]
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="deadnode"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deadnode/CharacterBody2D2"]
 position = Vector2(80, 526)
 shape = SubResource("CapsuleShape2D_dn0c2")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/CharacterBody2D2"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="deadnode/CharacterBody2D2"]
 position = Vector2(39, 501.74997)
 scale = Vector2(4.5, 4.4999995)
 sprite_frames = SubResource("SpriteFrames_lm3p2")
 
-[node name="Label" type="Label" parent="Node2D/CharacterBody2D2/AnimatedSprite2D"]
+[node name="Label" type="Label" parent="deadnode/CharacterBody2D2/AnimatedSprite2D"]
 offset_left = 25.55556
 offset_right = 190.55556
 offset_bottom = 23.0
